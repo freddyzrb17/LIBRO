@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El Léxico del Poder — 500 Conceptos</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/cormorant-garamond@5.0.8/index.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/cormorant-garamond@5.0.8/500.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/cormorant-garamond@5.0.8/600.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/cormorant-garamond@5.0.8/700.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5.0.8/index.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5.0.8/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5.0.8/500.css">
+<style>
+  :root {
+    --bg: #f4f1ea;
+    --bg-alt: #ebe6db;
+    --ink: #1a1a1a;
+    --ink-soft: #4a4a4a;
+    --muted: #8a8578;
+    --accent: #7a1f1f;
+    --line: #d4cfc2;
+    --card: #faf7f0;
+  }
+  [data-theme="dark"] {
+    --bg: #141210;
+    --bg-alt: #1c1917;
+    --ink: #ece7dd;
+    --ink-soft: #b8b2a5;
+    --muted: #7a7468;
+    --accent: #c89b6c;
+    --line: #2e2a26;
+    --card: #1c1917;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    transition: background 0.4s, color 0.4s;
+  }
+  .serif { font-family: 'Cormorant Garamond', serif; }
+
+  /* HEADER */
+  header {
+    border-bottom: 1px solid var(--line);
+    padding: 1.2rem 3rem;
+    position: sticky;
+    top: 0;
+    background: var(--bg);
+    z-index: 100;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+  }
+  .brand span { color: var(--accent); font-style: italic; }
+  .header-controls { display: flex; gap: 1rem; align-items: center; }
+  .counter {
+    font-size: 0.8rem;
+    color: var(--muted);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .theme-toggle {
+    background: none;
+    border: 1px solid var(--line);
+    color: var(--ink);
+    padding: 0.4rem 0.8rem;
+    cursor: pointer;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  .theme-toggle:hover { background: var(--ink); color: var(--bg); }
+
+  /* HERO */
+  .hero {
+    padding: 6rem 3rem 4rem;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    border-bottom: 1px solid var(--line);
+  }
+  .hero-eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 2rem;
+  }
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    font-weight: 500;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 2rem;
+  }
+  .hero h1 em { font-style: italic; color: var(--accent); }
+  .hero-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-style: italic;
+    color: var(--ink-soft);
+    max-width: 600px;
+    margin: 0 auto 3rem;
+  }
+  .hero-meta {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .hero-meta strong { color: var(--ink); display: block; font-size: 1.8rem; font-family: 'Cormorant Garamond', serif; margin-bottom: 0.3rem; letter-spacing: 0; text-transform: none; }
+
+  /* SEARCH */
+  .search-wrap {
+    max-width: 700px;
+    margin: 3rem auto 1rem;
+    padding: 0 3rem;
+  }
+  .search-box {
+    position: relative;
+  }
+  .search-box input {
+    width: 100%;
+    padding: 1.2rem 1.5rem;
+    padding-left: 3.5rem;
+    background: var(--card);
+    border: 1px solid var(--line);
+    color: var(--ink);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    border-radius: 2px;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .search-box input:focus { border-color: var(--accent); }
+  .search-box::before {
+    content: "⌕";
+    position: absolute;
+    left: 1.3rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    color: var(--muted);
+  }
+
+  /* FILTERS */
+  .filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 1.5rem 3rem 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .filter-btn {
+    background: none;
+    border: 1px solid var(--line);
+    color: var(--ink-soft);
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    border-radius: 2px;
+    transition: all 0.2s;
+    font-family: 'Inter', sans-serif;
+  }
+  .filter-btn:hover { border-color: var(--ink); color: var(--ink); }
+  .filter-btn.active { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+
+  /* TOMO SECTION */
+  .tomo {
+    padding: 4rem 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-top: 1px solid var(--line);
+  }
+  .tomo-header {
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: baseline;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  .tomo-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.9rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  .tomo-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 500;
+    line-height: 1.1;
+    flex: 1;
+    min-width: 250px;
+  }
+  .tomo-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--ink-soft);
+    font-size: 1.1rem;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  /* CONCEPT CARDS */
+  .concepts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+  }
+  .concept {
+    background: var(--card);
+    padding: 2rem 1.8rem;
+    transition: background 0.3s;
+    position: relative;
+  }
+  .concept:hover { background: var(--bg-alt); }
+  .concept-num {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.5rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.85rem;
+    color: var(--muted);
+    font-style: italic;
+  }
+  .concept-word {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+    line-height: 1.1;
+    padding-right: 2rem;
+  }
+  .def {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    line-height: 1.55;
+  }
+  .def-label {
+    display: inline-block;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 0.3rem;
+    font-weight: 500;
+  }
+  .def.feynman .def-label { color: var(--accent); }
+  .def.formal .def-label { color: var(--muted); }
+  .def-text { color: var(--ink-soft); }
+  .def.feynman .def-text { font-style: italic; color: var(--ink); }
+
+  /* EPILOGUE */
+  .epilogue {
+    padding: 6rem 3rem;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    border-top: 1px solid var(--line);
+  }
+  .epilogue-eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 2rem;
+  }
+  .epilogue h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    font-weight: 500;
+    font-style: italic;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+  }
+  .epilogue p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    color: var(--ink-soft);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+  }
+  .epilogue .signature {
+    margin-top: 3rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  footer {
+    padding: 2rem 3rem;
+    text-align: center;
+    font-size: 0.75rem;
+    color: var(--muted);
+    letter-spacing: 0.1em;
+    border-top: 1px solid var(--line);
+  }
+
+  .no-results {
+    text-align: center;
+    padding: 4rem 2rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.3rem;
+    color: var(--muted);
+    grid-column: 1 / -1;
+    background: var(--card);
+  }
+
+  @media (max-width: 768px) {
+    header { padding: 1rem 1.5rem; }
+    .hero, .tomo, .epilogue { padding-left: 1.5rem; padding-right: 1.5rem; }
+    .search-wrap, .filters { padding-left: 1.5rem; padding-right: 1.5rem; }
+    .concepts-grid { grid-template-columns: 1fr; }
+    .hero-meta { gap: 1.5rem; }
+  }
+
+  /* Animación */
+  .concept { animation: fadeIn 0.5s ease both; }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand">El Léxico <span>del Poder</span></div>
+  <div class="header-controls">
+    <div class="counter" id="counter">500 conceptos</div>
+    <button class="theme-toggle" id="themeToggle">Noche</button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-eyebrow">Edición Minimalista · Volumen Único</div>
+  <h1>Quinientas palabras para <em>debatir, pensar</em> y dominar la retórica.</h1>
+  <p class="hero-subtitle">Un arsenal intelectual. Cada concepto, dos caras: la intuición de Feynman para comprender, la definición formal para imponer.</p>
+  <div class="hero-meta">
+    <div><strong>7</strong>Tomos</div>
+    <div><strong>500</strong>Conceptos</div>
+    <div><strong>1000</strong>Definiciones</div>
+  </div>
+</section>
+
+<div class="search-wrap">
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Buscar un concepto, definición o palabra clave...">
+  </div>
+</div>
+
+<div class="filters" id="filters">
+  <button class="filter-btn active" data-tomo="all">Todos</button>
+  <button class="filter-btn" data-tomo="1">I · Cimientos</button>
+  <button class="filter-btn" data-tomo="2">II · Sociedad y Derecho</button>
+  <button class="filter-btn" data-tomo="3">III · Psicología y Medios</button>
+  <button class="filter-btn" data-tomo="4">IV · Tecnología y Futuro</button>
+  <button class="filter-btn" data-tomo="5">V · Economía Avanzada</button>
+  <button class="filter-btn" data-tomo="6">VI · Filosofía y Retórica</button>
+  <button class="filter-btn" data-tomo="7">VII · Maestría</button>
+</div>
+
+<main id="main"></main>
+
+<section class="epilogue">
+  <div class="epilogue-eyebrow">Epílogo</div>
+  <h2>El arte del debate</h2>
+  <p>Has llegado al final del arsenal. Pero recuerda: un diccionario no te hace sabio, te hace <em>peligroso</em> si lo usas mal.</p>
+  <p>La verdadera maestría no está en lanzar diez conceptos por minuto para intimidar. Está en elegir <em>una sola palabra precisa</em> en el momento exacto —el <em>kairos</em>— que desarme un argumento débil o ilumine una verdad oculta.</p>
+  <p>Usa la definición Feynman para conectar con la audiencia. Usa la definición formal para blindar tu argumento ante expertos.</p>
+  <div class="signature">— Fin del libro —</div>
+</section>
+
+<footer>
+  El Léxico del Poder · Edición digital · MMXXV
+</footer>
+
+<script>
+const tomos = {
+  1: { titulo: "Los Cimientos", sub: "Epistemología, Política, Economía y Retórica Básica.", range: [1, 150] },
+  2: { titulo: "Sociedad, Derecho y Geopolítica", sub: "Las reglas del juego humano, las fronteras y el poder entre naciones.", range: [151, 200] },
+  3: { titulo: "Psicología Social, Medios y Comportamiento", sub: "Cómo nos manipulan, cómo pensamos en grupo y cómo funciona la mente de masas.", range: [171, 250] },
+  4: { titulo: "Tecnología, Ciencia y Futuro", sub: "Las herramientas que redefinen la realidad y la mente humana.", range: [201, 250] },
+  5: { titulo: "Economía Avanzada y Estrategia", sub: "Las reglas ocultas del dinero, el riesgo y la toma de decisiones.", range: [251, 300] },
+  6: { titulo: "Filosofía, Retórica Avanzada y Cierre", sub: "Las herramientas finales del pensamiento, la persuasión y la condición humana.", range: [301, 400] },
+  7: { titulo: "Cierre y Maestría", sub: "Conceptos de síntesis, elegancia intelectual y dominio del debate.", range: [401, 500] }
+};
+
+const conceptos = [
+  // TOMO 1 — Cimientos (1-150)
+  [1,"Epistemología","El 'manual de instrucciones' de cómo sabemos lo que creemos saber.","Rama de la filosofía que estudia el origen, naturaleza y límites del conocimiento."],
+  [2,"Sesgo","Un atajo mental que nos hace ver el mundo torcido a favor de lo que ya pensamos.","Desviación sistemática e inconsciente del juicio racional o la percepción objetiva."],
+  [3,"Ruido","Errores aleatorios e inconsistentes, como una radio que cambia de volumen sin razón.","Variabilidad no deseada en juicios o decisiones humanas bajo condiciones idénticas."],
+  [4,"Heurística","Un 'truco mental' rápido para resolver problemas, aunque a veces nos equivoquemos.","Regla práctica o método de búsqueda que simplifica la toma de decisiones."],
+  [5,"Dialéctica","Chocar dos ideas opuestas para que de su pelea nazca una idea mejor.","Método de razonamiento que confronta tesis y antítesis para alcanzar una síntesis."],
+  [6,"Falacia ad hominem","Atacar a la persona en lugar de destruir su idea.","Argumento que descalifica al interlocutor en vez de refutar su premisa."],
+  [7,"Hombre de paja","Inventar un argumento débil del otro para destruirlo fácilmente.","Distorsión de la postura ajena para refutarla con mayor facilidad retórica."],
+  [8,"Navaja de Ockham","Si hay dos explicaciones, la más simple suele ser la correcta.","Principio metodológico que privilegia la hipótesis con menos suposiciones."],
+  [9,"Falsabilidad","Una idea solo es científica si se puede imaginar una prueba que la demuestre falsa.","Capacidad de una teoría de ser sometida a pruebas que la puedan contradecir."],
+  [10,"Paradigma","Las gafas a través de las cuales un grupo entero ve el mundo.","Conjunto de prácticas, valores y supuestos que definen una disciplina científica."],
+  [11,"Empirismo","Creer solo en lo que puedes tocar, medir o ver.","Teoría que afirma que el conocimiento proviene exclusivamente de la experiencia sensorial."],
+  [12,"Racionalismo","Confiar más en la lógica de tu cabeza que en lo que dicen tus ojos.","Doctrina que sostiene que la razón es la fuente principal del conocimiento."],
+  [13,"Silogismo","Un rompecabezas de tres piezas: si A es B, y B es C, entonces A es C.","Forma de razonamiento deductivo con dos premisas y una conclusión."],
+  [14,"Premisa","El cimiento sobre el que construyes tu argumento.","Proposición inicial de un razonamiento de la que se deriva una conclusión."],
+  [15,"Correlación","Dos cosas que suben o bajan juntas, pero no necesariamente por culpa la una de la otra.","Relación estadística entre dos o más variables."],
+  [16,"Causalidad","Cuando una cosa es la que realmente empuja a la otra a suceder.","Relación de causa y efecto entre dos eventos o fenómenos."],
+  [17,"Reducionismo","Explicar algo complejo como si fuera una sola pieza simple.","Enfoque que pretende explicar fenómenos complejos mediante sus partes más básicas."],
+  [18,"Holismo","El todo es más que la suma de sus partes (como una receta de pastel).","Teoría que sostiene que los sistemas deben analizarse como totalidades, no como partes aisladas."],
+  [19,"Axioma","Una verdad tan obvia que no necesita demostración (como 1+1=2).","Proposición tan clara y evidente que se admite sin demostración."],
+  [20,"Postulado","Una regla que aceptamos como verdadera para poder empezar a jugar el juego.","Proposición no demostrada que se asume como base de un razonamiento."],
+  [21,"Hipótesis","Una 'apuesta educada' que necesitas probar.","Suposición hecha a partir de datos, que sirve como base para iniciar una investigación."],
+  [22,"Variable","Cualquier cosa que puede cambiar en un experimento.","Símbolo o elemento que puede adoptar diferentes valores en un contexto dado."],
+  [23,"Sofisma","Un argumento que parece brillante, pero es una trampa lógica.","Razonamiento falso diseñado conscientemente para engañar."],
+  [24,"Paradoja","Una frase que se muerde la cola y parece imposible, pero te hace pensar.","Idea que parece contradictoria pero puede ser verdadera o revelar una verdad oculta."],
+  [25,"Apodíctico","Algo tan demostrado que es imposible negarlo.","Que demuestra o prueba algo con razones concluyentes e innegables."],
+  [26,"Exégesis","Desarmar un texto palabra por palabra para entender lo que realmente quiso decir el autor.","Explicación o interpretación crítica y detallada de un texto."],
+  [27,"Prolegómenos","Los calentamientos o preliminares antes del juego principal.","Preliminares o introducción a una ciencia, tratado o asunto."],
+  [28,"Perenne","Algo que no se marchita, que dura para siempre.","Que dura o es útil para siempre; incesante, continuo."],
+  [29,"Ambiguo","Que tiene más de un significado y te deja adivinando.","Que puede entenderse de varios modos o admitir distintas interpretaciones."],
+  [30,"Equívoco","Una palabra trampa que significa dos cosas distintas y confunde el debate.","Que tiene más de un sentido o puede interpretarse de múltiples maneras."],
+  [31,"Efecto Dunning-Kruger","Cuanto menos sabes, más crees que lo sabes todo.","Sesgo cognitivo por el que personas con baja habilidad sobreestiman su capacidad."],
+  [32,"Sesgo de confirmación","Buscar solo las noticias que te dan la razón e ignorar las que no.","Tendencia a favorecer, buscar o interpretar información que confirma las propias creencias."],
+  [33,"Sesgo de supervivencia","Mirar solo a los ganadores y olvidar a los miles que perdieron haciendo lo mismo.","Error lógico de concentrarse en las personas o cosas que sobrevivieron e ignorar las que no."],
+  [34,"Cámara de eco","Un cuarto donde solo escuchas tu propia voz rebotada por gente que piensa igual que tú.","Situación en la que las creencias se amplifican por la comunicación repetida en un sistema cerrado."],
+  [35,"Pensamiento sistémico","Ver el bosque y cómo los árboles se afectan entre sí, no solo un árbol.","Enfoque holístico para analizar sistemas complejos y sus interconexiones."],
+  [36,"Pensamiento lateral","Resolver un problema atacándolo por un lado inesperado, no de frente.","Método de resolución de problemas mediante un enfoque indirecto y creativo."],
+  [37,"Analfabetismo funcional","Saber leer las palabras, pero no entender lo que significan en contexto.","Incapacidad de usar la lectura y escritura para funcionar eficazmente en la sociedad."],
+  [38,"Dogma","Una verdad que no se permite cuestionar, punto.","Principio innegable que se establece como fundamento de una religión o ideología."],
+  [39,"Ortodoxia","Seguir las reglas al pie de la letra, como manda el manual.","Conformidad con las creencias o prácticas establecidas y aceptadas."],
+  [40,"Heterodoxia","Atreverse a pensar fuera de la caja que todos aceptan.","Conjunto de doctrinas u opiniones que se apartan de lo establecido o oficial."],
+  [41,"Falsedad","Decir que algo es real cuando no lo es.","Cualidad de lo que no se ajusta a la verdad o a la realidad."],
+  [42,"Verificabilidad","La posibilidad de comprobar que algo es verdad con pruebas.","Capacidad de una afirmación para ser confirmada mediante evidencia empírica."],
+  [43,"Inducción","Ver 100 cisnes blancos y asumir que todos los cisnes son blancos.","Razonamiento que parte de casos particulares para llegar a una conclusión general."],
+  [44,"Deducción","Saber que todos los hombres mueren y que Sócrates es hombre, por tanto, Sócrates morirá.","Razonamiento que parte de premisas generales para llegar a una conclusión particular."],
+  [45,"Abducción","Ser un detective: ver la pista y adivinar la mejor explicación posible.","Proceso de inferencia que busca la explicación más sencilla y probable para un conjunto de hechos."],
+  [46,"Carga de la prueba","Si tú haces la afirmación loca, a ti te toca traer las pruebas.","Obligación de aportar evidencia para sostener una afirmación en un debate."],
+  [47,"Petición de principio","Usar la conclusión como si fuera la prueba (ej: 'es verdad porque lo digo yo').","Falacia en la que la premisa ya asume la verdad de la conclusión."],
+  [48,"Falsa dicotomía","Hacerte creer que solo hay dos opciones, cuando en realidad hay diez.","Falacia que presenta una situación como si tuviera solo dos alternativas mutuamente excluyentes."],
+  [49,"Pendiente resbaladiza","Si dejamos que pase esto pequeño, inevitablemente llegará el apocalipsis.","Falacia que afirma que un paso inicial desencadenará una cadena de eventos negativos sin prueba."],
+  [50,"Ad populum","Todo el mundo lo cree, así que debe ser verdad.","Falacia que apela a la popularidad de una idea como prueba de su validez."],
+  [51,"Hegemonía","Cuando un grupo es tan poderoso que sus ideas se vuelven las 'normales' para todos.","Supremacía o dominio que un estado, clase o ideología ejerce sobre otros."],
+  [52,"Demagogia","Prometer el cielo a cambio de tu voto, sabiendo que es imposible.","Práctica política que busca apoyo popular apelando a emociones y prejuicios, no a la razón."],
+  [53,"Tecnocracia","Dejar que los ingenieros y científicos tomen las decisiones, no los políticos.","Sistema de gobierno donde los tomadores de decisiones son seleccionados por su experiencia técnica."],
+  [54,"Realpolitik","Hacer lo que es útil y poderoso, no lo que es 'moralmente bonito'.","Política basada en consideraciones prácticas y de poder, no en ideales morales."],
+  [55,"Clientelismo","Te doy un saco de cemento si me das tu voto.","Intercambio de bienes o favores por apoyo político, socavando el bien común."],
+  [56,"Idiosincrasia","El 'ADN cultural' único de un país o persona.","Rasgos, temperamento o carácter distintivo y propio de una colectividad."],
+  [57,"Populismo","Dividir al mundo en 'el pueblo puro' contra 'la élite corrupta'.","Ideología que contrapone 'el pueblo' a 'las élites', prometiendo representar la voluntad general."],
+  [58,"Oligarquía","Cuando un club pequeño y rico toma todas las decisiones.","Forma de gobierno en la que el poder supremo está en manos de unas pocas personas."],
+  [59,"Meritocracia","Un sistema donde asciendes por tu talento y esfuerzo, no por tus apellidos.","Sistema donde el poder y las recompensas se asignan según la capacidad y el mérito."],
+  [60,"Burocracia","La montaña de papeles y reglas que hace que todo vaya lento.","Sistema de administración basado en departamentos jerárquicos y reglas estrictas."],
+  [61,"Lobby","Grupos que susurran al oído de los políticos para que las leyes les favorezcan.","Actividad de grupos de presión para influir en las decisiones de los legisladores."],
+  [62,"Obstruccionismo","Hablar hasta que se acabe el tiempo para evitar que se vote una ley.","Táctica parlamentaria para retrasar o impedir la aprobación de una medida."],
+  [63,"Bipartidismo","Un sistema donde solo dos equipos gigantes se turnan para mandar.","Sistema político dominado por dos partidos principales."],
+  [64,"Pluralismo","Un jardín donde muchas flores diferentes pueden crecer y tener voz.","Reconocimiento y coexistencia de diversidad de ideas, grupos o intereses en una sociedad."],
+  [65,"Soberanía","El derecho de un país a mandar en su propia casa sin que nadie le diga cómo.","Autoridad suprema e independiente de un Estado sobre su territorio y población."],
+  [66,"Legitimidad","Cuando la gente acepta que quien manda tiene derecho a mandar.","Cualidad de ser aceptado como justo, válido y conforme a la ley o la moral."],
+  [67,"Coyuntura","El 'clima' político del momento exacto (temporal).","Conjunto de circunstancias que se dan en un momento determinado."],
+  [68,"Estructura","Los 'cimientos' del edificio social que cambian muy lento (económicos, legales).","Conjunto de elementos estables que conforman un sistema social o económico."],
+  [69,"Status quo","Dejar las cosas exactamente como están, sin mover un dedo.","Estado actual de las cosas o situación existente."],
+  [70,"Resiliencia","La capacidad de un sistema de recibir un golpe y volver a ponerse de pie.","Capacidad de adaptación de un ser o sistema frente a un agente perturbador."],
+  [71,"Sinergia","Cuando 1 + 1 = 3 porque dos cosas funcionan mejor juntas.","Acción de dos o más causas cuyo efecto es superior a la suma de sus efectos individuales."],
+  [72,"Narrativa","La historia que nos contamos para darle sentido a lo que pasa.","Conjunto de ideas, relatos y discursos que dan coherencia a un fenómeno."],
+  [73,"Discurso","No solo lo que se dice, sino cómo se dice y qué poder esconde.","Uso del lenguaje en un contexto social, portador de ideología y poder."],
+  [74,"Retórica","El arte de usar palabras para convencer, emocionar o manipular.","Arte de bien decir, de dar al lenguaje escrito o hablado eficacia para deleitar o persuadir."],
+  [75,"Pathos","Apelar a las lágrimas, el miedo o la alegría del público.","Apelación a las emociones del auditorio en un discurso."],
+  [76,"Ethos","Convencer porque el que habla es confiable y tiene buena reputación.","Apelación a la credibilidad y carácter del orador."],
+  [77,"Logos","Convencer usando datos, lógica y hechos fríos.","Apelación a la razón y la lógica en un argumento."],
+  [78,"Demos","El pueblo (la base de la democracia).","Término griego que designa al pueblo o conjunto de ciudadanos."],
+  [79,"Kratos","El poder o la fuerza para mandar.","Término griego que significa poder, autoridad o dominio."],
+  [80,"Polis","La ciudad-estado donde se inventó la política.","Comunidad de ciudadanos en la antigua Grecia, base de la organización política."],
+  [81,"Res publica","'La cosa pública': lo que es de todos, no del rey.","Concepto latino que da origen a 'república', el bien común o asunto público."],
+  [82,"Bien común","Lo que nos hace bien a todos como equipo, no solo a los estrellas.","Conjunto de condiciones sociales que permiten a todos los miembros de una sociedad alcanzar su plenitud."],
+  [83,"Justicia distributiva","Repartir la torta de manera justa según las necesidades y méritos.","Principio que regula la distribución equitativa de bienes y cargas en una sociedad."],
+  [84,"Justicia retributiva","Que el castigo encaje con el crimen (ojo por ojo, pero con leyes).","Teoría de la justicia que sostiene que el castigo debe ser proporcional a la ofensa."],
+  [85,"Equidad","Darle a cada uno lo que necesita para estar al mismo nivel (no es lo mismo que igualdad).","Principio moral de justicia e igualdad, considerando las circunstancias individuales."],
+  [86,"Igualdad","Darle a todos exactamente lo mismo, sin importar qué.","Ausencia de privilegios o discriminación; trato idéntico ante la ley."],
+  [87,"Libertad negativa","Que nadie te moleste ni te ponga trabas (libertad de algo).","Ausencia de interferencia externa o coacción por parte de otros."],
+  [88,"Libertad positiva","Tener el poder y los recursos reales para hacer lo que quieres (libertad para algo).","Capacidad de autodeterminación y control sobre la propia vida."],
+  [89,"Alienación","Sentirte como un extraño o un engranaje en un sistema que no controlas.","Proceso por el cual el individuo se siente extraño a su propia naturaleza o a su entorno."],
+  [90,"Enajenación","Perder el control sobre algo que era tuyo (como tu tiempo o tu trabajo).","Acto de transferir la propiedad de algo o pérdida de la razón/control."],
+  [91,"Cosificación","Tratar a una persona como si fuera un objeto o una herramienta.","Proceso de convertir a un ser humano en una cosa o mercancía."],
+  [92,"Fetichismo","Creer que un objeto (como el dinero) tiene poderes mágicos por sí mismo.","Atribución de poderes intrínsecos o mágicos a objetos o conceptos."],
+  [93,"Plusvalor","El valor extra que tú creas trabajando y que se queda tu jefe.","Valor generado por el trabajador que excede el costo de su fuerza de trabajo."],
+  [94,"Globalización","El mundo conectado como una sola gran red de comercio y cultura.","Proceso de interconexión mundial en los ámbitos económico, político, tecnológico y cultural."],
+  [95,"Deslocalización","Mudar la fábrica a otro país porque allí la mano de obra es más barata.","Traslado de actividades productivas de una empresa a otro país con menores costos."],
+  [96,"Proteccionismo","Poner muros a los productos extranjeros para proteger a los locales.","Política económica que restringe las importaciones para proteger la industria nacional."],
+  [97,"Libre comercio","Dejar que los productos crucen fronteras sin impuestos ni trabas.","Política de no discriminación contra las importaciones o exportaciones."],
+  [98,"Estado de bienestar","Un gobierno que te cubre la espalda con salud, educación y pensiones.","Sistema donde el Estado protege la salud y el bienestar de sus ciudadanos."],
+  [99,"Estado de derecho","Donde la ley manda sobre todos, incluso sobre el presidente.","Principio según el cual toda acción del Estado debe estar sujeta a la ley."],
+  [100,"Separación de poderes","Dividir el poder en tres para que ninguno se vuelva todopoderoso.","División del gobierno en ramas ejecutiva, legislativa y judicial para evitar la tiranía."],
+  [101,"Bonanza","Una racha de buena suerte y dinero fácil, como una fiebre del oro.","Período de prosperidad económica, abundancia o crecimiento acelerado."],
+  [102,"Externalidad","Cuando tu fábrica contamina el río y el pueblo paga los platos rotos.","Costo o beneficio que afecta a un tercero que no eligió incurrir en él."],
+  [103,"Estanflación","Lo peor de dos mundos: precios subiendo y la economía estancada.","Combinación de estancamiento económico, alto desempleo e inflación alta."],
+  [104,"Costo de oportunidad","Lo que dejas de ganar por elegir una cosa en lugar de otra.","Valor de la mejor alternativa renunciada al tomar una decisión."],
+  [105,"Austeridad","Apretarse el cinturón: el gobierno gasta mucho menos para no endeudarse.","Política económica que busca reducir el déficit mediante recortes en el gasto público."],
+  [106,"Inflación","Cuando tu dinero compra menos cosas que el año pasado.","Aumento generalizado y sostenido de los precios de bienes y servicios."],
+  [107,"Deflación","Cuando los precios bajan, pero la economía se congela y nadie gasta.","Disminución generalizada y sostenida del nivel de precios."],
+  [108,"PIB","La suma de todo lo que produce un país en un año, como su sueldo total.","Valor total de bienes y servicios finales producidos en un país en un período."],
+  [109,"Déficit fiscal","Cuando el gobierno gasta más de lo que recauda en impuestos.","Exceso de los gastos públicos sobre los ingresos públicos en un período."],
+  [110,"Deuda soberana","El préstamo que pide un país a otros países o bancos.","Deuda emitida por un gobierno nacional en su propia moneda o en divisas."],
+  [111,"Tipo de cambio","Cuántos pesos necesitas para comprar un dólar.","Precio de una moneda en términos de otra moneda."],
+  [112,"Arancel","Un impuesto que le cobran a los productos extranjeros al entrar al país.","Impuesto aplicado a los bienes importados."],
+  [113,"Subsidio","Un descuento o dinero que el gobierno te da para que algo sea más barato.","Ayuda económica otorgada por el Estado para fomentar una actividad o proteger a un grupo."],
+  [114,"Monopolio","Cuando una sola empresa es la dueña del juego y pone el precio que quiere.","Situación de mercado donde un único vendedor domina la oferta de un bien."],
+  [115,"Oligopolio","Cuando tres o cuatro empresas gigantes se ponen de acuerdo para dominar todo.","Mercado dominado por un pequeño número de vendedores."],
+  [116,"Oferta y demanda","Si todos lo quieren y hay poco, sube de precio. Si hay mucho y nadie lo quiere, baja.","Modelo económico que determina el precio y la cantidad de un bien en el mercado."],
+  [117,"Mercado negro","Vender cosas prohibidas o sin pagar impuestos, en las sombras.","Transacción ilegal de bienes o servicios, evadiendo regulaciones o impuestos."],
+  [118,"Especulación","Comprar algo no para usarlo, sino porque crees que mañana valdrá el doble.","Compra de activos con el objetivo de obtener ganancias por cambios en su precio."],
+  [119,"Burbuja económica","Cuando los precios suben a niveles locos por pura emoción, hasta que revientan.","Aumento rápido y sostenido del precio de un activo por encima de su valor real."],
+  [120,"Recesión","Cuando la economía tose y se encoge durante un par de meses.","Declive significativo de la actividad económica extendido por varios meses."],
+  [121,"Depresión","Una recesión que se convirtió en una enfermedad larga y grave.","Recesión económica severa y prolongada, con alto desempleo y caída del PIB."],
+  [122,"Crecimiento orgánico","Crecer vendiendo más de lo que ya haces, no comprando a la competencia.","Crecimiento de una empresa o economía generado internamente, sin fusiones."],
+  [123,"Inversión extranjera directa","Cuando una empresa de otro país viene a construir una fábrica aquí.","Inversión de una entidad de un país en intereses comerciales en otro país."],
+  [124,"Producto marginal","Lo que ganas extra al producir una unidad más.","Cambio en la producción total resultante de añadir una unidad más de un insumo."],
+  [125,"Bien público","Algo de lo que todos disfrutamos y nadie puede ser excluido (como un faro).","Bien no excluible y no rival en el consumo."],
+  [126,"Tragedia de los comunes","Si el pasto es de todos, nadie lo cuida y las ovejas se lo comen todo.","Situación donde individuos, actuando por interés propio, agotan un recurso compartido."],
+  [127,"Asimetría de información","Cuando el vendedor sabe que el coche está roto, pero tú no.","Situación en la que una parte de una transacción tiene más o mejor información que la otra."],
+  [128,"Riesgo moral","Conducir temerariamente porque sabes que el seguro pagará los daños.","Incentivo para asumir más riesgos cuando se está protegido de las consecuencias."],
+  [129,"Selección adversa","Cuando los enfermos son los únicos que compran seguro de salud, arruinando la aseguradora.","Proceso donde la asimetría de información antes de una transacción lleva a resultados ineficientes."],
+  [130,"Costo hundido","El dinero que ya gastaste y no puedes recuperar, así que no debes dejar que te obsesione.","Gasto que ya ha sido incurrido y no puede recuperarse."],
+  [131,"Elasticidad","Qué tanto cambia tu compra si el precio sube un poquito.","Medida de la sensibilidad de la cantidad demandada u ofrecida ante cambios en el precio."],
+  [132,"Progresividad","Cuanto más ganas, más alto es el porcentaje de impuestos que pagas.","Sistema impositivo donde la tasa impositiva aumenta a medida que aumenta la base imponible."],
+  [133,"Regresividad","Cuando el pobre paga proporcionalmente más que el rico (como el IVA en comida).","Sistema donde la carga impositiva representa un porcentaje mayor para los de bajos ingresos."],
+  [134,"Redistribución","El gobierno toma de los que más tienen para dar a los que menos tienen.","Transferencia de ingresos y riqueza para reducir la desigualdad."],
+  [135,"Capitalismo","Un sistema donde los dueños de las máquinas y el dinero deciden qué se produce.","Sistema económico basado en la propiedad privada de los medios de producción y el lucro."],
+  [136,"Socialismo","Un sistema donde la comunidad o el Estado controlan las fábricas para repartir mejor.","Sistema donde los medios de producción son propiedad o están regulados por la comunidad."],
+  [137,"Neoliberalismo","Creer que el mercado libre y el gobierno pequeño son la cura para todo.","Ideología que prioriza la liberalización económica, la privatización y la desregulación."],
+  [138,"Keynesianismo","Cuando la economía se cae, el gobierno debe gastar dinero para reactivarla.","Teoría económica que defiende la intervención estatal para suavizar los ciclos económicos."],
+  [139,"Dinero fiat","Billetes que valen solo porque el gobierno dice que valen, no porque sean de oro.","Moneda que no tiene valor intrínseco, respaldada solo por la confianza en el emisor."],
+  [140,"Liquidez","Qué tan rápido puedes convertir algo en dinero en efectivo.","Facilidad con la que un activo puede convertirse en efectivo sin perder valor."],
+  [141,"Solvencia","Tener suficientes bienes para pagar todas tus deudas si te las cobraran hoy.","Capacidad de una entidad para cumplir con sus obligaciones financieras a largo plazo."],
+  [142,"Apalancamiento","Usar dinero prestado para intentar ganar más dinero (como una palanca).","Uso de deuda financiada para aumentar el potencial retorno de una inversión."],
+  [143,"Interés compuesto","Ganar intereses sobre tus intereses, como una bola de nieve que crece sola.","Cálculo de intereses donde los intereses ganados se suman al capital para generar nuevos intereses."],
+  [144,"Amortización","Pagar tu deuda poco a poco, en cuotas, hasta que llegue a cero.","Proceso de reducir una deuda mediante pagos periódicos de capital e intereses."],
+  [145,"Balanza comercial","La cuenta de lo que vendimos al extranjero menos lo que les compramos.","Diferencia entre el valor de las exportaciones y las importaciones de un país."],
+  [146,"Balanza de pagos","El registro contable de todo el dinero que entra y sale del país.","Registro de todas las transacciones económicas entre residentes de un país y el resto del mundo."],
+  [147,"Reservas internacionales","El colchón de dólares u oro que guarda el país para emergencias.","Activos externos en divisas controlados por el banco central."],
+  [148,"Default","Cuando un país o empresa dice 'ya no puedo pagar' y rompe su promesa.","Cesación de pagos o incumplimiento de las obligaciones de una deuda."],
+  [149,"Hiperinflación","Cuando los precios se vuelven locos y el dinero pierde valor cada hora.","Inflación extremadamente alta y fuera de control, generalmente superior al 50% mensual."],
+  [150,"Indexación","Atar el precio de algo a otro indicador (como el dólar o la inflación) para que no pierda valor.","Ajuste automático de valores monetarios en función de un índice de precios."],
+
+  // TOMO 2 — Sociedad, Derecho, Geopolítica (151-200)
+  [151,"Anomia","Cuando las reglas del juego desaparecen y reina el caos.","Ausencia, falta o violación de las normas sociales vigentes."],
+  [152,"Capital Social","La red de amigos y conocidos que te ayudan a conseguir cosas.","Redes de relaciones sociales, confianza y reciprocidad que facilitan la acción colectiva."],
+  [153,"Gentrificación","Cuando los ricos se mudan a un barrio pobre, suben los precios y echan a los originales.","Proceso de remodelación urbana que atrae a residentes de mayores ingresos, desplazando a los originales."],
+  [154,"Interseccionalidad","Entender que ser mujer, pobre y minoría étnica te golpea tres veces, no solo una.","Marco teórico que analiza cómo diferentes formas de discriminación se superponen e interactúan."],
+  [155,"Etnocentrismo","Creer que tu cultura es el centro del universo y las demás son 'raras'.","Tendencia a juzgar otras culturas utilizando los valores y estándares de la propia."],
+  [156,"Soft Power","Convencer a otros de que te sigan porque les gusta tu cultura y tus valores.","Capacidad de un Estado para influir en otros mediante la atracción cultural y política, no la coerción."],
+  [157,"Hard Power","Hacerte obedecer porque tengo el ejército más grande o la economía más fuerte.","Uso de la coerción militar o económica para influir en el comportamiento o intereses de otros actores."],
+  [158,"Estado Fallido","Un país donde el gobierno perdió el control y no puede prestar servicios básicos.","Estado que ha perdido el monopolio legítimo de la fuerza y la capacidad de administrar su territorio."],
+  [159,"Estado Tapón","Un país pequeño dejado ahí a propósito para que dos gigantes no se toquen.","País situado entre dos potencias rivales, cuya existencia previene el conflicto directo entre ellas."],
+  [160,"Ius Cogens","Las reglas absolutas del derecho internacional que ningún país puede romper.","Conjunto de normas imperativas de derecho internacional general aceptadas por la comunidad internacional."],
+  [161,"Habeas Corpus","El derecho mágico que te salva de que la policía te desaparezca en una celda sin juicio.","Garantía constitucional que protege al individuo contra detenciones arbitrarias o ilegales."],
+  [162,"In Dubio Pro Reo","Si el juez tiene dudas, el acusado se va libre.","Principio jurídico que obliga a absolver al procesado cuando no hay pruebas suficientes de su culpabilidad."],
+  [163,"Persona Non Grata","Cuando un país le dice a un diplomático extranjero: 'Lárguese, ya no es bienvenido'.","Figura del derecho internacional que permite a un Estado rechazar o expulsar a un miembro diplomático."],
+  [164,"Autodeterminación","El derecho de un pueblo a decidir su propio destino y formar su propio país.","Principio del derecho internacional que otorga a los pueblos la libertad de determinar su estatus político."],
+  [165,"Irredentismo","Cuando un país quiere recuperar tierras que perdió en el pasado o que hablan su idioma.","Movimiento político que busca anexar territorios administrados por otros Estados, basándose en vínculos étnicos o históricos."],
+  [166,"Geopolítica","Entender la política no por ideas, sino por dónde están los mapas, los ríos y el petróleo.","Estudio de la influencia del espacio geográfico, los recursos y la demografía en la política internacional."],
+  [167,"Unipolaridad","Un mundo donde solo hay un jefe supremo.","Distribución del poder internacional donde un solo Estado posee la mayoría de la influencia económica, militar y cultural."],
+  [168,"Multipolaridad","Un mundo con varios jefes que se equilibran entre sí.","Estructura del sistema internacional donde el poder está distribuido entre tres o más Estados o bloques hegemónicos."],
+  [169,"Balcanización","Cuando un país se rompe en pedacitos que se odian entre sí.","Fragmentación de una región o Estado en entidades más pequeñas y a menudo hostiles."],
+  [170,"Cortina de Hierro","La frontera invisible pero impenetrable que dividía las ideas libres de las comunistas.","Aislamiento político, ideológico y físico de una región respecto al resto del mundo."],
+
+  // TOMO 3 — Psicología, Medios, Comportamiento (171-200)
+  [171,"Efecto Halo","Si alguien es guapo, asumimos que también es inteligente y buena persona.","Sesgo cognitivo donde la percepción de un rasgo positivo influye en la evaluación de otros rasgos desconocidos."],
+  [172,"Profecía Autocumplida","Creer tanto que algo va a pasar que tus acciones hacen que, efectivamente, pase.","Falsa definición de la situación que evoca un nuevo comportamiento que hace verdadera la concepción original."],
+  [173,"Disonancia Cognitiva","La incomodidad mental de creer dos cosas contradictorias o actuar contra tus principios.","Tensión psicológica experimentada por una persona que mantiene dos cogniciones contradictorias simultáneamente."],
+  [174,"Pensamiento de Grupo","Cuando todos en tu equipo están de acuerdo porque nadie quiere ser el 'amargado' que critica.","Modo de pensamiento en el que la búsqueda de consenso anula la capacidad de evaluar alternativas críticamente."],
+  [175,"Difusión de la Responsabilidad","'Alguien más lo hará', pensar cuando hay mucha gente mirando y nadie ayuda.","Fenómeno social donde los individuos se sienten menos obligados a actuar cuando hay otros presentes."],
+  [176,"Efecto Espectador","Cuantas más personas vean un accidente, menos probable es que alguien llame a la policía.","Inhibición de la ayuda a una víctima cuando otras personas están presentes, por la difusión de la responsabilidad."],
+  [177,"Ceguera de Atención","Estar tan concentrado en contar pases de balón que no ves pasar al oso.","Fallo de percepción al no notar un estímulo visual completamente inesperado por estar enfocado en otra tarea."],
+  [178,"Efecto Forer","Creer que tu horóscopo es exacto porque es tan vago que aplica para todos.","Tendencia a aceptar descripciones de personalidad vagas y generales como si fueran aplicables exclusivamente a uno mismo."],
+  [179,"Desensibilización","Ver tanta violencia en las noticias que ya nada te impacta.","Disminución de la respuesta emocional a un estímulo negativo tras exposiciones repetidas al mismo."],
+  [180,"Espiral del Silencio","No decir lo que piensas porque crees que eres el único que piensa así y te da miedo.","Teoría que sugiere que las personas ocultan sus opiniones si creen que están en minoría, por miedo al aislamiento."],
+  [181,"Agenda Setting","Los medios no te dicen qué pensar, pero sí te dicen en qué tienes que pensar hoy.","Teoría de la comunicación que postula que los medios influyen en la importancia que el público da a los temas."],
+  [182,"Framing","No es lo mismo decir 'el vaso está medio vacío' que 'el vaso está medio lleno'.","Forma en que se presenta la información, influyendo en cómo es percibida y procesada por la audiencia."],
+  [183,"Posverdad","Cuando a la gente le da igual si es mentira, mientras confirme lo que ya siente.","Distorsión deliberada de una realidad, apelando a emociones para influir en la opinión pública."],
+  [184,"Ventana de Overton","Las ideas que hoy son 'locas' pero que los políticos van normalizando hasta que se vuelven ley.","Rango de ideas políticas que son aceptables en el discurso público dominante en un momento dado."],
+  [185,"Cárcel de Cristal","Las barreras invisibles que impiden a las mujeres o minorías subir a los puestos de poder.","Barreras invisibles, pero infranqueables, basadas en prejuicios o discriminación sistémica."],
+  [186,"Falacia del Costo Hundido","Seguir viendo una película aburrida solo porque ya pagaste la entrada.","Tendencia a continuar una inversión o acción debido a lo ya invertido, en lugar de por los beneficios futuros."],
+  [187,"Aversión a la Pérdida","Te duele mucho más perder 100 dólares de lo que te alegra ganar 100 dólares.","Principio de la teoría de la perspectiva donde las pérdidas se ponderan psicológicamente más que las ganancias."],
+  [188,"Efecto Anclaje","Si te dicen que una camisa cuesta 100 y luego te la ofrecen a 50, crees que es barata.","Sesgo cognitivo donde la primera información recibida influye desproporcionadamente en las decisiones posteriores."],
+  [189,"Efecto de Arrastre","Apoyar a un equipo o idea solo porque ves que todo el mundo lo está haciendo.","Tendencia a adoptar ciertos comportamientos, estilos o actitudes simplemente porque otros lo hacen."],
+  [190,"Efecto de Falso Consenso","Creer que todo el mundo piensa como tú, cuando en realidad es solo tu burbuja.","Sesgo cognitivo que lleva a sobreestimar el grado en que los demás comparten nuestras creencias y comportamientos."],
+  [191,"Efecto de la Tercera Persona","'La propaganda no me afecta a mí, afecta a la gente ignorante'.","Tendencia a creer que los mensajes mediáticos tienen un mayor efecto en los demás que en uno mismo."],
+  [192,"Efecto Mandela","Recordar perfectamente algo que nunca pasó.","Fenómeno donde un gran grupo de personas comparte un recuerdo falso de un evento."],
+  [193,"Efecto Placebo","Curarte solo porque te dieron una pastilla de azúcar y creíste que era medicina.","Mejora en la salud del paciente debido a la expectativa de que el tratamiento funcionará."],
+  [194,"Efecto Nocebo","Sentirte mal porque te dijeron que el medicamento te daría náuseas, aunque fuera agua.","Deterioro en la salud debido a la expectativa negativa de que un tratamiento cause daño."],
+  [195,"Efecto Pigmalión","Si un profesor cree que un alumno es brillante, el alumno se vuelve brillante.","Fenómeno donde las altas expectativas de una persona sobre otra llevan a un aumento en el rendimiento."],
+  [196,"Efecto Golem","Lo contrario a Pigmalión: si crees que alguien es un inútil, terminará actuando como tal.","Proceso por el cual las bajas expectativas de un líder disminuyen el rendimiento del subordinado."],
+  [197,"Efecto Streisand","Intentar censurar una foto en internet y lograr que todo el mundo la vea.","Fenómeno donde el intento de ocultar o censurar información resulta en su mayor divulgación."],
+  [198,"Efecto Cobra","Pagar por cabezas de cobra para eliminarlas, y que la gente termine criando cobras para cobrar.","Intento de resolver un problema que, por incentivos perversos, termina empeorando el problema original."],
+  [199,"Ley de Goodhart","Si conviertes una métrica en una meta, dejará de ser una buena métrica.","Principio que establece que cuando una medida se convierte en objetivo, pierde su valor como indicador."],
+  [200,"Devaluación","Cuando el gobierno decide que tu moneda vale menos frente al dólar.","Reducción oficial del valor de la moneda de un país en relación con divisas extranjeras."],
+
+  // TOMO 4 — Tecnología, Ciencia, Futuro (201-250)
+  [201,"Apreciación","Cuando tu moneda se vuelve más fuerte y compra más dólares.","Aumento del valor de una moneda en relación con otras divisas."],
+  [202,"Política fiscal","El gobierno decide cuánto cobrar de impuestos y en qué gastar.","Uso del gasto público y la recaudación fiscal para influir en la economía."],
+  [203,"Política monetaria","El Banco Central decide cuánto dinero hay en la calle y a qué precio se presta.","Acciones del banco central para controlar la oferta monetaria y las tasas de interés."],
+  [204,"Banco central","El 'banco de los bancos', el que imprime el dinero y cuida su valor.","Institución nacional que gestiona la moneda, la política monetaria y la estabilidad financiera."],
+  [205,"Tasa de interés","El 'precio' que pagas por usar el dinero de alguien más.","Porcentaje que se cobra por el uso del dinero prestado."],
+  [206,"Bonos","Un papel que dice 'te presto dinero hoy, devuélvemelo con intereses mañana'.","Instrumento de deuda emitido por una entidad para financiar sus actividades."],
+  [207,"Acciones","Un pedacito de propiedad real de una empresa.","Título valor que representa una parte alícuota del capital social de una sociedad anónima."],
+  [208,"Dividendo","La parte de las ganancias que la empresa te reparte por ser dueño de una acción.","Distribución de una parte de las utilidades de una empresa a sus accionistas."],
+  [209,"Volatilidad","Qué tan salvaje y brusco es el movimiento de los precios (como una montaña rusa).","Medida estadística de la dispersión de los rendimientos de un activo."],
+  [210,"Diversificación","No poner todos los huevos en la misma canasta.","Estrategia de invertir en una variedad de activos para reducir el riesgo."],
+  [211,"Utilitarismo","La mejor acción es la que hace feliz a la mayor cantidad de personas.","Teoría ética que juzga las acciones por su capacidad de maximizar el bienestar general."],
+  [212,"Deontología","Hacer lo correcto porque es tu deber, sin importar las consecuencias.","Teoría ética que se basa en reglas, deberes y obligaciones morales."],
+  [213,"Determinismo","Creer que todo lo que pasa ya estaba escrito por causas anteriores.","Doctrina que sostiene que todo evento, incluyendo la acción humana, está causalmente determinado."],
+  [214,"Libre albedrío","La creencia de que tú eres el verdadero capitán de tus decisiones.","Capacidad de los agentes racionales para elegir entre diferentes cursos de acción."],
+  [215,"Teleología","Explicar algo por el propósito o la meta que tiene, no por cómo empezó.","Doctrina que explica los fenómenos por sus fines o propósitos."],
+  [216,"Ontología","La rama de la filosofía que se pregunta: ¿qué significa realmente 'existir'?.","Rama de la metafísica que estudia la naturaleza del ser, la existencia y la realidad."],
+  [217,"Metafísica","Pensar en lo que está más allá de lo que podemos ver o medir.","Rama de la filosofía que estudia la realidad última, más allá de lo físico."],
+  [218,"Pragmatismo","Una idea es buena si funciona en la vida real, no solo en la teoría.","Doctrina que valora las ideas por su utilidad práctica y sus consecuencias."],
+  [219,"Relativismo","'Eso es verdad para ti, pero no para mí'; no hay verdades absolutas.","Doctrina que niega la existencia de verdades absolutas, vinculándolas al contexto."],
+  [220,"Nihilismo","Creer que la vida no tiene sentido, propósito o valor intrínseco.","Actitud filosófica que rechaza los principios morales, religiosos o de sentido."],
+  [221,"Existencialismo","La vida no tiene sentido de fábrica; tú tienes que inventar tu propio sentido.","Corriente que enfatiza la existencia individual, la libertad y la elección."],
+  [222,"Posmodernismo","Desconfiar de las 'grandes historias' que dicen tener la verdad absoluta.","Movimiento que cuestiona las narrativas maestras, la objetividad y la verdad universal."],
+  [223,"Ilustración","La época que dijo: 'Usa tu propia razón, no le tengas miedo a pensar'.","Movimiento intelectual del s. XVIII que priorizaba la razón, la ciencia y los derechos humanos."],
+  [224,"Realidad construida","Lo que consideramos 'real' es en parte inventado por nuestra cultura y lenguaje.","Concepto de que la realidad social es creada a través de interacciones y acuerdos humanos."],
+  [225,"Anarquía","Un sistema sin jefe ni gobierno, donde la gente se organiza sola.","Ausencia de autoridad o jerarquía coercitiva; sistema de organización voluntaria."],
+  [226,"Sindicalismo","Los trabajadores se unen para tener más fuerza al negociar con el jefe.","Movimiento que defiende los derechos de los trabajadores a través de sindicatos."],
+  [227,"Acumulación primitiva","Cómo se consiguió el dinero inicial para el capitalismo (a menudo por la fuerza).","Proceso histórico de separación de los productores de sus medios de producción."],
+  [228,"Consenso de Washington","El paquete de recetas económicas (privatizar, abrir mercados) que impuso EE.UU. en los 90.","Conjunto de políticas económicas neoliberales promovidas para países en desarrollo."],
+  [229,"Iniciativa popular","Cuando los ciudadanos proponen una ley directamente, sin esperar a los políticos.","Mecanismo de democracia directa que permite a los ciudadanos proponer legislación."],
+  [230,"Algoritmo","Una receta de pasos que una computadora sigue para tomar una decisión por ti.","Conjunto ordenado de operaciones sistemáticas que permite hacer un cálculo."],
+  [231,"Big Data","Tantos datos que un humano no puede leerlos, pero una máquina encuentra patrones.","Conjuntos de datos tan grandes o complejos que requieren software especializado para su procesamiento."],
+  [232,"Ciberseguridad","Los candados digitales para que nadie robe tu información.","Práctica de proteger sistemas, redes y programas de ataques digitales."],
+  [233,"Transhumanismo","Usar la tecnología para mejorar el cuerpo y la mente humana más allá de lo natural.","Movimiento que defiende el uso de la tecnología para mejorar las capacidades humanas."],
+  [234,"Empatía cognitiva","Entender cómo piensa el otro, aunque no estés de acuerdo con él.","Capacidad de comprender la perspectiva o el estado mental de otra persona."],
+  [235,"Sesgo de anclaje","Quedarse pegado al primer número o idea que escuchas, aunque sea absurdo.","Tendencia a depender demasiado de la primera información recibida al tomar decisiones."],
+  [236,"Falacia de autoridad","'Es verdad porque lo dijo un famoso/experto', sin mirar las pruebas.","Afirmar que algo es cierto solo porque una figura de autoridad lo dice."],
+  [237,"Tu quoque","'Tú también lo haces', desviando la culpa en lugar de responder la crítica.","Falacia que descalifica un argumento señalando que quien lo hace también comete la falta."],
+  [238,"Ad ignorantiam","'No puedes probar que no existen los fantasmas, así que existen'.","Afirmar que algo es verdad solo porque no se ha demostrado que sea falso."],
+  [239,"Non sequitur","Una conclusión que no tiene nada que ver con lo que se dijo antes.","Conclusión que no se deduce lógicamente de las premisas."],
+  [240,"Eufemismo","Decir 'daños colaterales' en lugar de 'civiles muertos' para que suene suave.","Palabra o expresión suave o decorosa que sustituye a otra considerada tabú o dura."],
+  [241,"Disfemismo","Lo contrario: usar una palabra más dura o grosera de lo necesario para atacar.","Sustitución de un término neutro por otro con connotaciones negativas o despectivas."],
+  [242,"Oxímoron","Juntar dos palabras que se contradicen, como 'silencio ensordecedor'.","Figura retórica que combina dos conceptos de significado opuesto."],
+  [243,"Tautología","Decir lo mismo dos veces con distintas palabras.","Afirmación que es verdadera por necesidad o por su forma lógica, repitiendo la premisa."],
+  [244,"Círculo vicioso","Un problema que se alimenta a sí mismo y no te deja salir.","Argumento o situación donde la causa y el efecto se retroalimentan negativamente."],
+  [245,"Círculo virtuoso","Un problema que se resuelve a sí mismo porque cada éxito trae otro éxito.","Situación donde los efectos positivos de una acción refuerzan la acción misma."],
+  [246,"Blockchain","Un libro de contabilidad digital que nadie puede trucar ni borrar.","Registro descentralizado, inmutable y distribuido de transacciones digitales."],
+  [247,"Criptomoneda","Dinero digital que no controla ningún gobierno ni banco.","Activo digital diseñado para funcionar como medio de intercambio usando criptografía."],
+  [248,"Metaverso","Un mundo virtual donde puedes vivir, trabajar y jugar con un avatar.","Espacio virtual inmersivo y persistente que converge con el mundo físico."],
+  [249,"IoT (Internet de las Cosas)","Tu refrigerador y tu reloj hablando entre sí a través de internet.","Red de objetos físicos con sensores y software conectados a internet."],
+  [250,"Obsolescencia Programada","Fabricar cosas para que se rompan a propósito y tengas que comprar otra.","Planificación del fin de la vida útil de un producto para forzar su reemplazo."],
+
+  // TOMO 5 — Economía Avanzada y Estrategia (251-300)
+  [251,"Huella Digital","El rastro de migas de pan que dejas cada vez que usas internet.","Rastro de datos que un usuario deja al interactuar en entornos digitales."],
+  [252,"Deepfake","Un video falso tan perfecto que parece 100% real.","Síntesis de medios hiperrealista generada por IA para suplantar la identidad de alguien."],
+  [253,"Sesgo Algorítmico","Cuando la IA discrimina porque aprendió de datos humanos prejuiciosos.","Errores sistemáticos en sistemas computacionales que crean resultados injustos."],
+  [254,"Filtro Burbuja","Cuando internet solo te muestra lo que ya te gusta, aislándote de lo demás.","Aislamiento intelectual generado por algoritmos que personalizan los resultados de búsqueda."],
+  [255,"Gamificación","Hacer que tareas aburridas parezcan un videojuego con puntos y premios.","Uso de mecánicas de juego en contextos no lúdicos para motivar comportamientos."],
+  [256,"Neuroplasticidad","Tu cerebro puede cambiar y rewiringarse a sí mismo toda la vida.","Capacidad del sistema nervioso para cambiar su actividad y estructura en respuesta a estímulos."],
+  [257,"Epigenética","Cómo tus hábitos pueden 'encender' o 'apagar' los genes de tus hijos.","Estudio de cambios en la expresión génica que no alteran la secuencia de ADN."],
+  [258,"Antropoceno","La era geológica donde el humano es la fuerza que más cambia el planeta.","Época geológica propuesta caracterizada por el impacto global de las actividades humanas."],
+  [259,"Sostenibilidad","Satisfacer nuestras necesidades sin robarle el futuro a los que vienen.","Satisfacción de las necesidades presentes sin comprometer las de las generaciones futuras."],
+  [260,"Economía Circular","Un sistema donde nada se desperdicia; todo se reutiliza o recicla.","Modelo de producción y consumo que implica compartir, reparar y reciclar materiales."],
+  [261,"Greenwashing","Una empresa que se pinta de verde para parecer ecológica, pero no lo es.","Estrategia de marketing para presentar una imagen pública ambientalmente responsable, pero engañosa."],
+  [262,"Decrecimiento","La idea de que producir y consumir menos nos hará más felices y salvará el planeta.","Corriente que propone reducir la producción y el consumo para alcanzar la sostenibilidad."],
+  [263,"Huella de Carbono","La cantidad de contaminación que dejas atrás con tu estilo de vida.","Indicador ambiental que refleja las emisiones de gases de efecto invernadero de una actividad."],
+  [264,"Geoningeniería","Intentar arreglar el clima del planeta con grandes trucos tecnológicos.","Intervención deliberada y a gran escala en el sistema climático terrestre para mitigar el cambio climático."],
+  [265,"Escasez Artificial","Limitar la producción a propósito para que el producto parezca más valioso.","Restricción deliberada de la oferta de un bien para mantener altos sus precios."],
+  [266,"Monopolio Natural","Cuando tiene más sentido que una sola empresa preste el servicio (como el agua).","Situación donde los costos fijos hacen más eficiente que un solo proveedor atienda todo el mercado."],
+  [267,"Bien Común Digital","Recursos en internet (como Wikipedia) que son de todos y para todos.","Recursos digitales no rivales y no excluibles gestionados colectivamente."],
+  [268,"Código Abierto","Software cuyo 'receta' es pública y cualquiera puede mejorarla.","Software con código fuente accesible para su modificación y distribución."],
+  [269,"Propiedad Intelectual","Las leyes que protegen tus ideas, inventos y creaciones de que te los roben.","Derechos legales que protegen las creaciones de la mente humana."],
+  [270,"Dominio Público","Obras cuyo copyright expiró y ahora cualquiera puede usarlas gratis.","Conjunto de obras y conocimientos no protegidos por derechos de propiedad intelectual."],
+  [271,"Fair Use","Usar un pedacito de una obra con derechos de autor para criticarla o enseñar.","Doctrina legal que permite el uso limitado de material protegido sin permiso del titular."],
+  [272,"Censura Preventiva","Prohibir que algo se publique antes de que siquiera salga a la luz.","Prohibición gubernamental de la expresión antes de que ocurra."],
+  [273,"Libertad de Expresión","El derecho a decir lo que piensas sin que el gobierno te encarcele.","Derecho humano a buscar, recibir y difundir información e ideas sin interferencia."],
+  [274,"Discurso de Odio","Palabras que atacan a alguien solo por ser quien es, incitando al daño.","Expresión que ataca o utiliza lenguaje peyorativo respecto a una persona o grupo por su identidad."],
+  [275,"Cultura de la Cancelación","Cuando la multitud en internet decide que alguien ya no merece tener plataforma.","Práctica de retirar apoyo público a figuras o empresas tras acciones o dichos considerados ofensivos."],
+  [276,"Woke","Estar 'despierto' o muy consciente de las injusticias sociales y raciales.","Conciencia percibida sobre problemas de justicia social y desigualdad sistémica."],
+  [277,"Identitarismo","Definirte y luchar políticamente solo desde tu grupo (raza, género, religión).","Enfoque político que prioriza la identidad de grupo sobre la identidad individual o universal."],
+  [278,"Universalismo","Creer que todos los humanos compartimos los mismos derechos y valores básicos.","Doctrina que afirma la aplicabilidad de ideas o principios a todos los seres humanos."],
+  [279,"Cosmopolitismo","Sentirte ciudadano del mundo antes que ciudadano de un solo país.","Ideología que propone que todos los seres humanos pertenecen a una sola comunidad global."],
+  [280,"Nacionalismo","Poner los intereses y la identidad de tu nación por encima de todo.","Ideología que enfatiza la lealtad, devoción o adhesión a una nación o estado-nación."],
+  [281,"Patriotismo","Amor por tu país, pero sin necesidad de odiar a los demás.","Sentimiento de apego y compromiso con la propia patria."],
+  [282,"Chovinismo","Un nacionalismo tóxico que cree que tu país es superior a todos los demás.","Creencia irracional en la superioridad o dominación de un propio grupo sobre otros."],
+  [283,"Xenofobia","Miedo u odio irracional hacia los extranjeros o lo desconocido.","Rechazo, odio u hostilidad hacia las personas extranjeras o percibidas como ajenas."],
+  [284,"Apátrida","Una persona que ningún país reconoce como su ciudadano.","Persona que no es considerada como nacional por ningún Estado conforme a su legislación."],
+  [285,"Asilo Político","Cuando un país te protege porque en el tuyo te persiguen por tus ideas.","Protección otorgada por un Estado a un extranjero perseguido por motivos políticos."],
+  [286,"Refugiado","Alguien que huye de su país porque su vida corre peligro real.","Persona que ha huido de su país por fundados temores de persecución."],
+  [287,"Diáspora","Cuando un pueblo se dispersa por el mundo, pero mantiene su identidad.","Dispersión de un pueblo o etnia fuera de su lugar de origen."],
+  [288,"Nómada Digital","Trabajar desde una laptop mientras viajas por diferentes países.","Persona que utiliza telecomunicaciones para ganar su vida y conduce su vida de forma nómada."],
+  [289,"Brecha Digital","La desigualdad entre los que tienen internet y los que no.","Desigualdad en el acceso, uso o impacto de las tecnologías de la información y la comunicación."],
+  [290,"Flexibilización Cuantitativa","El banco central imprime dinero de la nada para comprar bonos y reactivar la economía.","Política monetaria no convencional de compra de activos por el banco central."],
+  [291,"Trilema Económico","No puedes tener a la vez: tipo de cambio fijo, libre movimiento de capitales y política monetaria propia.","Imposibilidad de un país de mantener simultáneamente esas tres condiciones macroeconómicas."],
+  [292,"Curva de Laffer","Si subes demasiado los impuestos, el gobierno recauda menos porque la gente evade.","Relación teórica entre las tasas impositivas y la recaudación fiscal total."],
+  [293,"Paradoja de Jevons","Hacer una tecnología más eficiente hace que la usemos más, no que ahorremos recursos.","Aumento del consumo de un recurso debido a las mejoras en la eficiencia de su uso."],
+  [294,"Tragedia de los Anticomunes","Cuando demasiados dueños de un recurso impiden que alguien lo use, y se desperdicia.","Situación donde múltiples titulares de derechos de exclusión impiden el uso socialmente óptimo de un recurso."],
+  [295,"Teoría de Juegos","La ciencia matemática de tomar decisiones cuando el resultado depende de lo que haga tu rival.","Estudio de modelos matemáticos de interacción estratégica entre agentes racionales."],
+  [296,"Equilibrio de Nash","Cuando nadie puede mejorar su situación cambiando solo su propia estrategia.","Concepto de solución en un juego no cooperativo donde ningún jugador tiene incentivo para desviarse."],
+  [297,"Dilema del Prisionero","Cuando cooperar sería lo mejor para ambos, pero el miedo a ser traicionado hace que ambos pierdan.","Juego de suma no cero que muestra por qué dos individuos racionales podrían no cooperar."],
+  [298,"Juego de Suma Cero","Para que yo gane 10, tú tienes que perder 10. No se crea riqueza, solo se transfiere.","Situación matemática donde la ganancia de un participante es exactamente igual a la pérdida de otro."],
+  [299,"Juego de Suma Positiva","Cooperamos y creamos algo nuevo, así que ambos terminamos ganando más de lo que teníamos.","Interacción donde la ganancia total de los participantes es mayor que la pérdida total."],
+  [300,"Riesgo Sistémico","El peligro de que caiga un banco gigante y arrastre a toda la economía con él.","Riesgo de colapso de todo un sistema financiero o mercado, no solo de una entidad."],
+
+  // TOMO 6 — Filosofía, Retórica Avanzada (301-400)
+  [301,"Demasiado Grande para Quebrar","Un banco tan enorme que el gobierno está obligado a salvarlo para no hundir al país.","Institución financiera cuya quiebra provocaría una crisis económica generalizada."],
+  [302,"Rescate Financiero","El gobierno inyecta dinero de los contribuyentes para salvar a una empresa en quiebra.","Asignación de capital o reestructuración de deuda por parte del Estado a una entidad en riesgo."],
+  [303,"Corralito","Cuando el gobierno te prohíbe sacar tu propio dinero del banco.","Restricción temporal a la disposición de depósitos bancarios para evitar una corrida."],
+  [304,"Cepo Cambiario","El gobierno te limita cuántos dólares puedes comprar o vender legalmente.","Conjunto de restricciones administrativas al mercado de divisas impuestas por un Estado."],
+  [305,"Dolarización","Abandonar tu moneda local y usar el dólar para todo.","Adopción oficial del dólar estadounidense como moneda de curso legal en un país."],
+  [306,"Tipo de Cambio Flexible","El valor de tu moneda lo decide el mercado, no el gobierno.","Régimen cambiario donde el valor de la moneda se determina por las fuerzas del mercado."],
+  [307,"Fuga de Capitales","Cuando los ricos sacan su dinero del país porque tienen miedo del futuro.","Salida masiva de activos financieros y capital de un país debido a inestabilidad económica o política."],
+  [308,"Fuga de Cerebros","Cuando los mejores profesionales se van del país porque no hay oportunidades.","Emigración de individuos altamente capacitados o educados hacia otras naciones."],
+  [309,"Economía Sumergida","Todo el dinero que se mueve en negro, sin pagar impuestos ni seguir reglas.","Actividad económica no registrada, no regulada o no gravada por las autoridades."],
+  [310,"PIB Per Cápita","El promedio de riqueza que le tocaría a cada persona si repartieramos el PIB en partes iguales.","Producto Interno Bruto de un país dividido por su población total."],
+  [311,"Coeficiente de Gini","Un número del 0 al 1 que mide qué tan desigual es la riqueza en un país.","Medida estadística de la dispersión de la distribución del ingreso o la riqueza."],
+  [312,"Curva de Phillips","La idea de que si hay más empleo, la inflación sube, y viceversa.","Relación económica inversa observada entre la tasa de desempleo y la tasa de inflación."],
+  [313,"Salario Real","Lo que realmente puedes comprar con tu sueldo, descontando la inflación.","Salario nominal ajustado por el nivel de precios o la inflación."],
+  [314,"Salario Nominal","El número que aparece en tu contrato, sin importar si el pan cuesta el doble.","Cantidad de dinero pagada a un trabajador sin ajustar por inflación."],
+  [315,"Poder Adquisitivo","La cantidad de bienes y servicios que puedes comprar con una unidad de moneda.","Valor de una moneda expresado en términos de la cantidad de bienes que puede comprar."],
+  [316,"Inflación Subyacente","La inflación real, quitando de la cuenta los precios locos de la comida y la energía.","Medida de inflación que excluye los precios volátiles de alimentos y energía."],
+  [317,"IPC","La lista de compras promedio de una familia para medir cuánto subió la vida.","Indicador que mide la variación de los precios de una canasta de bienes y servicios."],
+  [318,"Bien Inferior","Un producto que compras menos cuando te haces más rico.","Bien cuya demanda disminuye cuando aumenta el ingreso del consumidor."],
+  [319,"Bien de Giffen","Un bien tan básico que, si sube de precio, la gente lo compra más.","Bien no lujoso para el cual la demanda aumenta a medida que aumenta el precio."],
+  [320,"Bien Veblen","Un producto de lujo que la gente compra más porque es caro y muestra estatus.","Bien para el cual la demanda aumenta a medida que aumenta su precio, por su valor de ostentación."],
+  [321,"Economías de Escala","Cuanto más produces, más barato te sale fabricar cada unidad.","Reducción del costo unitario de un bien a medida que aumenta el volumen de producción."],
+  [322,"Ventaja Comparativa","No tienes que ser el mejor en todo, solo en lo que te cuesta menos producir.","Capacidad de producir un bien a un costo de oportunidad menor que otro productor."],
+  [323,"Dumping","Vender productos en el extranjero más barato de lo que cuesta producirlos para destruir a la competencia.","Práctica de exportar un producto a un precio inferior a su valor normal en el mercado de origen."],
+  [324,"Arancel Ad Valorem","Un impuesto de importación que es un porcentaje del valor de la mercancía.","Impuesto sobre las importaciones calculado como un porcentaje del valor declarado del bien."],
+  [325,"Cuota de Importación","El gobierno dice: 'Solo pueden entrar 1000 coches este año', sin importar el precio.","Restricción física directa sobre la cantidad de un bien que puede ser importado."],
+  [326,"Zona de Libre Comercio","Países que acuerdan no cobrarse impuestos entre ellos.","Área formada por un grupo de países que eliminan aranceles entre sí."],
+  [327,"Unión Aduanera","Como la zona de libre comercio, pero además todos ponen el mismo impuesto a los países de afuera.","Zona de libre comercio con un arancel externo común frente a terceros países."],
+  [328,"Mercado Común","Unión aduanera + libertad total para que las personas y el dinero se muevan entre los países.","Integración económica que añade la libre circulación de factores productivos a una unión aduanera."],
+  [329,"Costo Marginal","Cuánto te cuesta fabricar una sola unidad más de tu producto.","Cambio en el costo total de producción que surge al producir una unidad adicional."],
+  [330,"Ingreso Marginal","El dinero extra que ganas al vender una sola unidad más.","Ingreso adicional generado por la venta de una unidad adicional de un bien o servicio."],
+  [331,"Monopsonio","Cuando hay muchos vendedores, pero un solo comprador que pone el precio.","Estructura de mercado donde existe un único demandante frente a múltiples oferentes."],
+  [332,"Oligopsonio","Cuando solo hay dos o tres grandes compradores que dominan el mercado.","Mercado dominado por un pequeño número de grandes compradores."],
+  [333,"Cartera de Inversiones","La mezcla de acciones, bonos y efectivo que tienes para no perder todo si algo falla.","Conjunto de activos financieros mantenidos por un inversor."],
+  [334,"Mayéutica","El arte de hacer preguntas para que la otra persona 'dé a luz' a la verdad por sí misma.","Método socrático de indagación dialéctica para alcanzar el conocimiento."],
+  [335,"Solipsismo","La idea de que solo tu propia mente existe y todo lo demás podría ser una ilusión.","Doctrina filosófica que afirma que solo el propio yo es conocido con certeza."],
+  [336,"Estoicismo","Controlar tus emociones y aceptar solo lo que puedes cambiar, ignorando el resto.","Escuela filosófica que enseña el desarrollo del autocontrol y la fortaleza para dominar emociones destructivas."],
+  [337,"Epicureísmo","Buscar la felicidad a través de placeres simples, la amistad y evitar el dolor.","Doctrina que identifica el bien con el placer moderado y la ausencia de sufrimiento (ataraxia)."],
+  [338,"Cinismo","Rechazar las reglas sociales y la riqueza para vivir con total libertad y honestidad brutal.","Escuela que preconiza una vida conforme a la naturaleza, despreciando las convenciones sociales."],
+  [339,"Escepticismo","Dudar de todo hasta que haya pruebas sólidas; no creer ciegamente.","Actitud de duda o cuestionamiento hacia la certeza del conocimiento."],
+  [340,"Agnosticismo","'No sé si Dios existe, y creo que es imposible saberlo con certeza'.","Postura que considera que la existencia de Dios o lo sobrenatural es desconocida o incognoscible."],
+  [341,"Ateísmo","La falta de creencia en la existencia de deidades.","Ausencia de creencia en la existencia de dioses o seres sobrenaturales."],
+  [342,"Deísmo","Creer que un creador hizo el universo, pero luego se fue y no interviene.","Creencia en un Dios creador que no interviene en el universo, basado en la razón, no en la revelación."],
+  [343,"Panteísmo","Creer que Dios y el Universo son exactamente la misma cosa.","Doctrina que identifica a Dios con la totalidad del universo y la naturaleza."],
+  [344,"Dualismo","Creer que la mente y el cuerpo son dos cosas completamente separadas.","Doctrina que postula la existencia de dos sustancias o principios fundamentales e irreducibles."],
+  [345,"Monismo","Creer que todo en el universo está hecho de una sola sustancia o principio.","Doctrina que afirma que toda la realidad se reduce a un único principio o sustancia."],
+  [346,"Materialismo","Solo existe la materia; tus pensamientos son solo químicos en tu cerebro.","Doctrina que sostiene que la materia es la única realidad fundamental."],
+  [347,"Idealismo","La realidad es, en el fondo, mental o espiritual; las ideas crean el mundo.","Doctrina que postula que la realidad es fundamentalmente mental o inmaterial."],
+  [348,"Positivismo","Solo es conocimiento real lo que se puede probar con la ciencia y los sentidos.","Corriente que afirma que el único conocimiento auténtico es el conocimiento científico."],
+  [349,"Constructivismo","No descubrimos la realidad, la 'construimos' con nuestro cerebro y nuestra cultura.","Teoría que sostiene que el conocimiento y la realidad son construcciones sociales o cognitivas."],
+  [350,"Estructuralismo","Entender algo no por sí mismo, sino por cómo encaja en el sistema que lo rodea.","Enfoque que analiza los elementos de la cultura en relación con una estructura subyacente."],
+  [351,"Postestructuralismo","Romper esas estructuras, diciendo que el significado es fluido e inestable.","Movimiento que critica la estabilidad de las estructuras y la objetividad del significado."],
+  [352,"Hermenéutica","El arte y la ciencia de interpretar textos, especialmente los difíciles o antiguos.","Teoría y metodología de la interpretación, especialmente de textos bíblicos o literarios."],
+  [353,"Fenomenología","Estudiar las cosas tal y como las experimentamos conscientemente, sin teorías de por medio.","Estudio filosófico de las estructuras de la experiencia y la conciencia desde la primera persona."],
+  [354,"Absurdismo","El universo no tiene sentido, y buscarlo es absurdo, pero debemos vivir y rebelarnos de todos modos.","Filosofía que postula la confrontación entre la búsqueda humana de sentido y el silencio irracional del universo."],
+  [355,"Vitalismo","Creer que los seres vivos tienen una 'chispa' o energía especial que la materia inerte no tiene.","Doctrina que postula la existencia de una fuerza vital no física distintiva de la materia inanimada."],
+  [356,"Consecuencialismo","Una acción es buena o mala solo por sus resultados, no por la intención.","Teoría ética que juzga la moralidad de una acción basándose en sus consecuencias."],
+  [357,"Virtudismo","No te enfoques en las reglas, enfócate en ser una persona con buen carácter.","Teoría ética que enfatiza las virtudes o el carácter moral del agente, en lugar de las reglas o consecuencias."],
+  [358,"Altruismo","Preocuparte por el bienestar de los demás, incluso si te cuesta algo a ti.","Principio o práctica de preocupación por la felicidad de otros seres humanos o animales."],
+  [359,"Egoísmo Ético","La teoría de que deberías actuar siempre en tu propio interés.","Teoría normativa que postula que los agentes morales deben actuar en su propio interés."],
+  [360,"Hedonismo","El placer es la única cosa que realmente vale la pena buscar en la vida.","Doctrina que identifica el bien con la búsqueda del placer y la evitación del dolor."],
+  [361,"Ascetismo","Renunciar a los placeres mundanos para alcanzar una pureza espiritual o mental.","Estilo de vida caracterizado por la abstinencia de placeres mundanos, a menudo por razones religiosas."],
+  [362,"Ataraxia","Un estado de calma mental absoluta, sin ansiedad ni preocupación.","Estado de tranquilidad y serenidad imperturbable, libre de ansiedad y preocupación."],
+  [363,"Eudaimonía","La verdadera felicidad o 'florecimiento' humano, no solo placer momentáneo.","Término griego traducido como felicidad o florecimiento humano, logrado a través de la virtud."],
+  [364,"Areté","Excelencia o cumplir tu propósito al máximo nivel.","Concepto griego de excelencia o virtud, el cumplimiento del propósito o función de una cosa."],
+  [365,"Hubris","El orgullo desmedido que te hace desafiar a los dioses o a la naturaleza y te lleva a la ruina.","Confianza o arrogancia excesiva, a menudo en conflicto con los dioses o el destino."],
+  [366,"Catarsis","La liberación emocional y limpieza que sientes al ver una tragedia o llorar.","Proceso de liberación o purificación de emociones fuertes, especialmente a través del arte."],
+  [367,"Mímesis","El arte de imitar o representar la realidad en una obra.","Representación o imitación del mundo real en el arte y la literatura."],
+  [368,"Kairos","El momento perfecto y oportuno para actuar, no solo el tiempo que pasa.","El momento oportuno, decisivo o propicio para una acción."],
+  [369,"Tópico","Un lugar común o argumento estándar que se puede usar para construir un discurso.","Lugar o recurso retórico común donde se encuentran los argumentos probables."],
+  [370,"Entimema","Un silogismo al que le falta una premisa obvia, para que el público la complete en su mente.","Silogismo retórico en el que una premisa o la conclusión se omiten por ser evidentes."],
+  [371,"Sorites","Una cadena de silogismos donde la conclusión de uno es la premisa del siguiente.","Argumento que consiste en una serie de silogismos encadenados."],
+  [372,"Paradoja del Mentiroso","'Esta frase es falsa'. Si es verdad, es falsa. Si es falsa, es verdad.","Declaración que se contradice a sí misma, creando un bucle lógico irresoluble."],
+  [373,"Dilema","Una elección entre dos opciones, ambas malas o problemáticas.","Situación que requiere una elección entre dos alternativas, ambas igualmente indeseables."],
+  [374,"Aporía","Un callejón sin salida en el pensamiento; un problema que parece no tener solución.","Estado de perplejidad o impasse en un argumento filosófico."],
+  [375,"Heurística de Disponibilidad","Juzgar la probabilidad de algo basándote en lo fácil que es recordar un ejemplo.","Atajo mental que depende de ejemplos inmediatos que vienen a la mente."],
+  [376,"Heurística de Representatividad","Juzgar algo por cuánto se parece a un estereotipo, ignorando las estadísticas reales.","Atajo mental para estimar la probabilidad basado en la similitud con un prototipo."],
+  [377,"Falacia Ad Verecundiam","'Es verdad porque lo dijo un experto famoso', sin revisar la evidencia.","Apelar a una autoridad no calificada o irrelevante como prueba de una afirmación."],
+  [378,"Post Hoc Ergo Propter Hoc","'El gallo cantó y luego salió el sol, por lo tanto, el gallo hizo salir el sol'.","Falacia de asumir que porque B siguió a A, A causó B."],
+  [379,"Cum Hoc Ergo Propter Hoc","'Dos cosas pasan al mismo tiempo, así que una causa la otra'.","Falacia de asumir que la correlación implica causalidad."],
+  [380,"Falacia Ad Baculum","'Acepta mi argumento o te voy a lastimar/despedir'.","Apelación a la fuerza o a la amenaza para ganar un argumento."],
+  [381,"Falacia Ad Misericordiam","'No me condenes, mira qué triste es mi vida', en lugar de discutir los hechos.","Apelación a la piedad o a la emoción para ganar un argumento, evadiendo los hechos."],
+  [382,"Falsa Causa","Atribuir la causa de un evento a algo que no tiene relación real con él.","Falacia de identificar incorrectamente la causa de un fenómeno."],
+  [383,"Generalización Apresurada","Conocer a dos personas groseras de un país y decir que todos son groseros.","Sacar una conclusión general basada en una muestra insuficiente o no representativa."],
+  [384,"Falsa Analogía","Comparar dos cosas que son muy diferentes en los aspectos que importan.","Argumentar que porque dos cosas son similares en un aspecto, lo son en todos."],
+  [385,"Argumento Circular","'La Biblia es verdad porque Dios la escribió, y Dios existe porque lo dice la Biblia'.","Falacia donde la conclusión que se quiere probar ya está incluida en las premisas."],
+  [386,"Ignoratio Elenchi","Probar un punto que no tiene nada que ver con el tema que se está debatiendo.","Falacia de presentar un argumento que puede ser válido, pero no aborda la cuestión en disputa."],
+  [387,"Dicto Simpliciter","Aplicar una regla general a un caso que es claramente una excepción.","Falacia de aplicar una regla general a un caso particular sin considerar las circunstancias excepcionales."],
+  [388,"Ad Hominem Circunstancial","'Claro que dices que fumar es malo, tú eres médico y quieres que la gente esté sana'.","Desacreditar un argumento sugiriendo que el oponente tiene un interés personal en la conclusión."],
+  [389,"Whataboutism","'¿Y qué hay de lo que hizo tu país?', para evitar responder a una crítica legítima.","Técnica de propaganda que responde a una acusación con una contraacusación, desviando el tema."],
+  [390,"Gaslighting","Manipular a alguien para que dude de su propia cordura o memoria.","Forma de abuso psicológico que hace que la víctima dude de su propia percepción de la realidad."],
+  [391,"Love Bombing","Ahogar a alguien en atención y halagos al principio para controlarlo emocionalmente después.","Táctica de manipulación que implica demostraciones excesivas de afecto para ganar control sobre una persona."],
+  [392,"Triangulación","Usar a una tercera persona para validar tu punto de vista o desestabilizar a tu oponente.","Táctica psicológica de usar a un tercero para reforzar una posición o crear conflicto."],
+  [393,"Proyección Psicológica","Acusar a otros de tener los defectos o intenciones que tú mismo tienes.","Mecanismo de defensa donde se atribuyen a otros los propios sentimientos o impulsos inaceptables."],
+  [394,"Racionalización","Inventar una excusa lógica y aceptable para justificar un comportamiento vergonzoso.","Mecanismo de defensa que justifica comportamientos o sentimientos con razones lógicas pero falsas."],
+  [395,"Sublimación","Canalizar un impulso negativo o prohibido hacia algo productivo y socialmente aceptado.","Mecanismo de defensa maduro que transforma impulsos inaceptables en acciones socialmente valoradas."],
+  [396,"Represión","Empujar un recuerdo o deseo doloroso al sótano de tu mente para no tener que enfrentarlo.","Mecanismo de defensa inconsciente que excluye de la conciencia pensamientos o recuerdos angustiosos."],
+  [397,"Inconsciente Colectivo","Una 'nube' de recuerdos y símbolos que todos los humanos compartimos desde el nacimiento.","Concepto junguiano de una parte de la mente inconsciente compartida por la humanidad."],
+  [398,"Arquetipo","Un personaje o símbolo universal que aparece en todas las culturas.","Patrón o modelo original universal del cual se derivan todas las personas, objetos o conceptos similares."],
+  [399,"La Sombra","El lado oscuro de tu personalidad que te niegas a reconocer.","Aspecto inconsciente de la personalidad que el yo consciente no reconoce en sí mismo."],
+  [400,"Individuación","El proceso de convertirse en tu verdadero yo, integrando tus luces y tus sombras.","Proceso psicológico de integrar los elementos conscientes e inconscientes para alcanzar la plenitud."],
+
+  // TOMO 7 — Cierre y Maestría (401-500)
+  [401,"Complejo de Inferioridad","Sentir que nunca eres lo suficientemente bueno, lo que te lleva a compensar en exceso.","Sentimiento de no valer lo suficiente, que puede llevar a una compensación exagerada."],
+  [402,"Mecanismo de Defensa","Trucos inconscientes de tu mente para protegerte de la ansiedad o la verdad dolorosa.","Estrategias psicológicas inconscientes para proteger a una persona de la ansiedad o el reconocimiento de la realidad."],
+  [403,"Antifragilidad","No solo resistir el caos, sino mejorar y hacerse más fuerte gracias a él.","Propiedad de un sistema que gana con el desorden, la volatilidad y el estrés."],
+  [404,"Cisne Negro","Un evento rarísimo, impredecible, que lo cambia todo cuando sucede.","Evento de gran impacto, difícil de predecir y que se racionaliza después de que ocurre."],
+  [405,"Mediocristán","Un mundo donde los promedios funcionan y los extremos no rompen el sistema.","Dominio donde los eventos extremos tienen poco impacto en el conjunto total."],
+  [406,"Extremistán","Un mundo donde un solo evento o persona puede dominar todo el sistema.","Dominio donde los eventos extremos dominan las propiedades del conjunto."],
+  [407,"Asimetría de Riesgo","Cuando alguien toma las ganancias si sale bien, pero tú asumes las pérdidas si sale mal.","Situación donde las consecuencias de una decisión no se distribuyen equitativamente entre las partes."],
+  [408,"Opción Asimétrica","Una apuesta donde lo máximo que puedes perder es poco, pero lo que puedes ganar es ilimitado.","Oportunidad con un potencial de ganancia desproporcionadamente mayor que el riesgo de pérdida."],
+  [409,"Via Negativa","Mejorar tu vida eliminando lo malo en lugar de añadir lo bueno.","Enfoque que busca la mejora o el conocimiento mediante la eliminación o negación, no la adición."],
+  [410,"Principio de Precaución","Si una acción podría causar un daño grave e irreversible, mejor no hacerla.","Estrategia de gestión de riesgos que justifica la acción preventiva ante la posibilidad de daño grave."],
+  [411,"Principio de Responsabilidad","Debemos actuar de manera que las futuras generaciones puedan seguir viviendo en la Tierra.","Imperativo ético de considerar las consecuencias a largo plazo de las acciones tecnológicas y ecológicas."],
+  [412,"Imperativo Categórico","'Actúa solo según una regla que te gustaría que se convirtiera en ley universal para todos'.","Mandato moral absoluto de Kant que no depende de deseos o fines personales."],
+  [413,"Contrato Social","El acuerdo invisible por el cual renunciamos a un poco de libertad a cambio de seguridad y orden.","Teoría que explica el origen de la sociedad y la legitimidad de la autoridad del Estado sobre el individuo."],
+  [414,"Estado de Naturaleza","Cómo sería la vida humana si no existieran gobiernos, leyes ni sociedad.","Concepto filosófico que describe la condición hipotética de la humanidad antes de la fundación de la sociedad."],
+  [415,"Derecho Natural","Derechos que tienes por el simple hecho de ser humano, sin que ningún gobierno te los tenga que dar.","Derechos que se consideran universales e inalienables, derivados de la naturaleza o la razón."],
+  [416,"Derecho Positivo","Las leyes escritas y creadas por los humanos en un lugar y tiempo específicos.","Conjunto de normas jurídicas escritas y vigentes en un Estado en un momento determinado."],
+  [417,"Iusnaturalismo","La creencia de que existe una ley moral superior a las leyes escritas por los hombres.","Doctrina que postula la existencia de derechos inherentes a la naturaleza humana, anteriores al derecho positivo."],
+  [418,"Iuspositivismo","La creencia de que solo es 'ley' lo que el Estado ha escrito y aprobado formalmente.","Doctrina que sostiene que el derecho es exclusivamente un conjunto de normas establecidas por la autoridad."],
+  [419,"Garantismo","Un sistema donde la ley existe para proteger al débil del poder arbitrario del Estado.","Modelo jurídico que prioriza la protección de los derechos fundamentales frente al poder punitivo del Estado."],
+  [420,"Constitucionalismo","La idea de que el poder del gobierno debe estar limitado por una constitución escrita.","Doctrina que defiende la limitación del poder estatal mediante una constitución y el estado de derecho."],
+  [421,"Pesos y Contrapesos","Que el poder del presidente sea frenado por el congreso, y el del congreso por los jueces.","Sistema de controles recíprocos entre las ramas del gobierno para prevenir el abuso de poder."],
+  [422,"Veto","El poder de decir 'no' y bloquear una decisión, aunque la mayoría esté de acuerdo.","Derecho o poder de una autoridad para detener unilateralmente la aprobación de una medida."],
+  [423,"Quórum","El número mínimo de personas que deben estar presentes para que una votación sea válida.","Número mínimo de miembros de un cuerpo deliberante necesarios para que sus decisiones sean válidas."],
+  [424,"Filibusterismo","Hablar durante horas sin parar para agotar el tiempo y evitar que se vote una ley.","Táctica parlamentaria de obstrucción mediante discursos prolongados para retrasar o impedir una votación."],
+  [425,"Moción de Censura","Cuando el parlamento vota para despedir al presidente o primer ministro por mal desempeño.","Procedimiento parlamentario para destituir al gobierno o a un ministro por falta de confianza."],
+  [426,"Estado de Excepción","Cuando el gobierno suspende las reglas normales y tus derechos porque hay una emergencia grave.","Situación jurídica en la que el Estado suspende garantías constitucionales ante una crisis o amenaza."],
+  [427,"Realismo Político","Ver el mundo como es (poder, interés), no como nos gustaría que fuera.","Enfoque de las relaciones internacionales que prioriza el poder y el interés nacional sobre la moral."],
+  [428,"Constructivismo Social","Las cosas que damos por sentadas (como el dinero o el género) son inventadas por la sociedad.","Teoría que sostiene que muchos conceptos y categorías son productos de la interacción social, no de la naturaleza."],
+  [429,"Síntesis","Unir dos ideas opuestas para crear una tercera, mejor y más completa.","Proceso de combinar elementos diversos para formar un todo coherente o una nueva idea."],
+  [430,"Emergencia","Cuando partes simples se juntan y de repente crean una propiedad nueva que ninguna tenía sola.","Proceso por el cual entidades complejas surgen de interacciones simples, mostrando propiedades nuevas."],
+  [431,"Entropía","La tendencia natural del universo a ir del orden al desorden y al caos.","Medida del desorden o aleatoriedad en un sistema cerrado; segunda ley de la termodinámica."],
+  [432,"Negentropía","La vida es la capacidad de crear orden localmente, luchando contra el caos del universo.","Entropía negativa; proceso por el cual un sistema exporta entropía para mantener su organización interna."],
+  [433,"Homeostasis","La capacidad de tu cuerpo de mantenerse estable a pesar de los cambios de afuera.","Propiedad de un sistema abierto para regular su entorno interno y mantener condiciones estables."],
+  [434,"Adaptación","Cambiar tu forma de ser para sobrevivir mejor en un entorno nuevo.","Proceso por el cual un organismo o sistema se ajusta a su entorno para mejorar su supervivencia."],
+  [435,"Evolución","No es 'progreso', es simplemente lo que funciona lo suficientemente bien para no desaparecer.","Cambio en las características hereditarias de poblaciones biológicas a través de generaciones."],
+  [436,"Selección Natural","La naturaleza no elige al 'mejor', elige al que mejor encaja con el entorno actual.","Proceso por el cual los organismos mejor adaptados a su entorno tienen más probabilidades de sobrevivir y reproducirse."],
+  [437,"Mutación","Un error en el código que a veces resulta ser una mejora increíble.","Cambio en la secuencia de ADN que puede introducir nuevas características en un organismo."],
+  [438,"Simbiosis","Dos especies diferentes que deciden trabajar juntas porque ambas ganan.","Interacción biológica cercana y a largo plazo entre dos especies diferentes."],
+  [439,"Parasitismo","Uno gana a costa de dañar al otro, sin matarlo (todavía).","Relación simbiótica donde una especie se beneficia a expensas de la otra."],
+  [440,"Mutualismo","Una simbiosis donde ambos se ayudan y ninguno sale perjudicado.","Interacción entre dos especies en la que ambas se benefician."],
+  [441,"Comensalismo","Uno gana y al otro no le importa ni le afecta.","Relación donde una especie se beneficia y la otra no es afectada ni positiva ni negativamente."],
+  [442,"Nicho Ecológico","El 'trabajo' o rol específico que cumple una especie en su ecosistema.","Rol y posición de una especie en su entorno, incluyendo cómo satisface sus necesidades."],
+  [443,"Capacidad de Carga","El número máximo de personas o animales que un lugar puede soportar sin colapsar.","Tamaño máximo de población que un entorno puede sostener indefinidamente con los recursos disponibles."],
+  [444,"Punto de Inflexión","El momento exacto en que una tendencia pequeña se convierte en un cambio masivo e imparable.","Momento en una curva o proceso donde se produce un cambio significativo y duradero en la dirección."],
+  [445,"Efecto Mariposa","Un pequeño aleteo en China puede causar un huracán en Texas semanas después.","Concepto de la teoría del caos donde pequeñas variaciones en las condiciones iniciales generan grandes diferencias en el resultado."],
+  [446,"Teoría del Caos","Sistemas que parecen aleatorios, pero en realidad siguen reglas muy sensibles y complejas.","Rama de las matemáticas que estudia el comportamiento de sistemas dinámicos altamente sensibles a las condiciones iniciales."],
+  [447,"Fractal","Un patrón que se repite a sí mismo sin importar cuánto zoom le hagas.","Objeto geométrico cuya estructura básica se repite a diferentes escalas."],
+  [448,"Navaja de Hanlon","Nunca atribuyas a la maldad lo que puede ser explicado perfectamente por la estupidez.","Principio heurístico que aconseja no asumir intenciones maliciosas cuando la incompetencia es una explicación suficiente."],
+  [449,"Principio de Peter","En una jerarquía, todo el mundo asciende hasta llegar a su nivel de 'incompetencia total'.","Concepto de que los empleados tienden a ascender hasta su nivel de incompetencia, donde permanecen."],
+  [450,"Ley de Parkinson","El trabajo se expande hasta llenar todo el tiempo que tienes disponible para hacerlo.","Adagio que afirma que la demanda de un recurso aumenta para igualar la oferta de ese recurso."],
+  [451,"Ley de Trivialidad de Parkinson","Un comité pasa 2 horas discutiendo el color de un cobertizo de 50 dólares, y 2 minutos aprobando un reactor nuclear de 10 millones.","Tendencia de las organizaciones a dedicar tiempo desproporcionado a asuntos triviales."],
+  [452,"Efecto IKEA","Valorar mucho más algo porque tú mismo lo construiste, aunque esté chueco.","Sesgo cognitivo por el cual las personas otorgan un valor desproporcionadamente alto a los productos que crearon parcialmente."],
+  [453,"Maldición del Conocimiento","Cuando sabes tanto de un tema que te vuelve imposible explicárselo a un principiante.","Sesgo cognitivo donde una persona, al comunicarse, asume que los demás tienen el contexto para entender."],
+  [454,"Ilusión de Transparencia","Creer que los demás pueden leer tu mente y notar lo nervioso o enojado que estás.","Tendencia a sobreestimar el grado en que los demás pueden adivinar nuestro estado mental interno."],
+  [455,"Sesgo de Optimismo","Creer que a ti no te van a pasar las cosas malas que les pasan a los demás.","Tendencia a creer que es menos probable que nos ocurran eventos negativos y más probable que nos ocurran positivos."],
+  [456,"Falacia del Jugador","'Ha salido rojo 10 veces seguidas en la ruleta, ¡ahora tiene que salir negro!'","Creencia errónea de que eventos aleatorios pasados influyen en eventos aleatorios futuros."],
+  [457,"Regresión a la Media","Si hoy te fue increíblemente bien o mal, lo más probable es que mañana te vaya 'normal'.","Fenómeno estadístico por el cual las mediciones extremas tienden a acercarse al promedio en mediciones posteriores."],
+  [458,"Ley de los Grandes Números","A corto plazo todo es caos y suerte, pero a largo plazo las estadísticas siempre ganan.","Teorema que establece que el promedio de los resultados se acerca al valor esperado a medida que se realizan más pruebas."],
+  [459,"Paradoja de la Tolerancia","Si toleras absolutamente todo, terminarás tolerando a los intolerantes, que destruirán la tolerancia.","Idea de que la tolerancia ilimitada debe llevar a la desaparición de la tolerancia."],
+  [460,"Dilema del Tranvía","¿Desvías el tren para matar a 1 persona y salvar a 5?","Experimento mental de ética que plantea un conflicto entre el consecuencialismo y la deontología."],
+  [461,"Velo de la Ignorancia","Diseña las reglas de la sociedad sin saber si nacerás rico, pobre, hombre o mujer.","Experimento mental de Rawls para determinar la justicia de las instituciones sociales desde una posición de imparcialidad."],
+  [462,"Problema del Principal-Agente","Cuando contratas a alguien para que cuide tus intereses, pero él persigue los suyos.","Conflicto de interés inherente en cualquier relación donde una parte toma decisiones en nombre de otra."],
+  [463,"Captura del Regulador","Cuando la agencia del gobierno que debe vigilar a una industria termina siendo controlada por esa misma industria.","Fallo político donde una agencia reguladora actúa en beneficio de la industria que debe regular."],
+  [464,"Rentismo","Ganar dinero no por crear valor, sino por controlar un recurso escaso y cobrar peaje.","Obtención de ingresos a través de la propiedad o control de recursos escasos, sin contribuir a la productividad."],
+  [465,"Búsqueda de Rentas","Gastar energía en influir en el gobierno para obtener privilegios, en lugar de competir en el mercado.","Esfuerzo por aumentar la propia participación en la riqueza existente sin crear nueva riqueza."],
+  [466,"Destrucción Creativa","Para que nazca una industria nueva y mejor, la vieja tiene que morir.","Proceso de innovación industrial que revoluciona la estructura económica desde dentro, destruyendo lo viejo."],
+  [467,"Mano Invisible","La idea de que al buscar tu propio beneficio, ayudas a la sociedad sin proponértelo.","Concepto de Adam Smith sobre cómo los mercados libres asignan recursos eficientemente a través del interés propio."],
+  [468,"Fallo de Mercado","Cuando el mercado libre, dejado a su propia suerte, produce un resultado injusto o ineficiente.","Situación en la que la asignación de bienes y servicios por un mercado libre no es eficiente."],
+  [469,"Bien Público Puro","Un bien que, si yo lo uso, no te quita nada a ti, y no puedo impedir que lo uses.","Bien que es no rival en el consumo y no excluible en el acceso."],
+  [470,"Externalidad Positiva","Cuando tu acción beneficia a otros sin que te paguen.","Beneficio que recibe un tercero como resultado de una actividad económica en la que no participa directamente."],
+  [471,"Costo de Transacción","El tiempo, dinero y esfuerzo que gastas solo en hacer el trato, no en el producto en sí.","Costos incurridos al hacer una transacción económica, más allá del precio del bien o servicio."],
+  [472,"Principio de Incertidumbre","En la física cuántica, no puedes saber a la vez dónde está una partícula y a qué velocidad va.","Principio de Heisenberg que establece un límite fundamental a la precisión con la que se pueden conocer ciertos pares de propiedades."],
+  [473,"Entrelazamiento Cuántico","Dos partículas conectadas de tal forma que lo que le pasa a una, le pasa instantáneamente a la otra.","Fenómeno físico donde los estados cuánticos de dos o más objetos deben describirse en relación con los otros."],
+  [474,"Relatividad","El tiempo y el espacio no son fijos; cambian dependiendo de qué tan rápido te muevas.","Teoría de Einstein que describe la gravedad como la curvatura del espacio-tiempo por la masa y la energía."],
+  [475,"Entropía Informacional","La medida de cuánta sorpresa o incertidumbre contiene un mensaje.","Medida de la incertidumbre asociada a una variable aleatoria, en teoría de la información."],
+  [476,"Ruido Blanco","Un sonido que contiene todas las frecuencias, que el cerebro usa para bloquear otros ruidos.","Señal aleatoria con una densidad espectral de potencia plana."],
+  [477,"Señal vs. Ruido","La señal es el mensaje real; el ruido es la estática que intenta ocultarlo.","Distinción entre información relevante y variabilidad aleatoria o irrelevante."],
+  [478,"Eco de Cámara","Un entorno cerrado donde solo escuchas tus propias ideas rebotadas y amplificadas.","Situación en la que las creencias se amplifican o refuerzan por la comunicación repetida dentro de un sistema cerrado."],
+  [479,"Polarización","Cuando dos grupos se alejan cada vez más hacia los extremos, perdiendo el terreno común.","Proceso por el cual la opinión pública se divide en extremos opuestos."],
+  [480,"Radicalización","El proceso de adoptar puntos de vista políticos, sociales o religiosos cada vez más extremos.","Proceso por el cual un individuo o grupo adopta posturas extremas, a menudo violentas."],
+  [481,"Dogmatismo","Aferrarse a una creencia como una verdad absoluta, cerrando la mente a cualquier evidencia contraria.","Tendencia a establecer principios o reglas de manera rígida, sin admitir discusión o duda."],
+  [482,"Fanatismo","Pasión obsesiva e intolerante por una causa, que justifica cualquier medio.","Adhesión tenaz e intransigente a ideas, creencias o prácticas, a menudo con hostilidad hacia las diferentes."],
+  [483,"Iconoclasta","Alguien que ataca o rechaza las creencias o instituciones tradicionales establecidas.","Persona que desafía las creencias o instituciones establecidas."],
+  [484,"Iconografía","El estudio de las imágenes y símbolos que una cultura usa para representar sus ideas.","Estudio y descripción de imágenes, símbolos y temas en las artes visuales."],
+  [485,"Semiótica","La ciencia que estudia cómo los signos y símbolos crean significado.","Estudio de los signos y símbolos, especialmente como elementos del lenguaje o sistemas de comunicación."],
+  [486,"Denotación","El significado literal y de diccionario de una palabra.","Significado objetivo, literal o primario de un signo o palabra."],
+  [487,"Connotación","Las emociones, ideas o asociaciones culturales que una palabra evoca más allá de su significado literal.","Significado secundario o asociativo de una palabra, más allá de su definición literal."],
+  [488,"Polisemia","Cuando una sola palabra tiene varios significados diferentes.","Pluralidad de significados de una palabra o signo lingüístico."],
+  [489,"Homofonía","Palabras que suenan igual pero se escriben y significan cosas distintas.","Fenómeno por el cual dos o más palabras tienen la misma pronunciación pero distinto significado y escritura."],
+  [490,"Pleonasmo","Decir lo mismo dos veces con distintas palabras.","Figura retórica que consiste en usar más palabras de las necesarias para expresar una idea."],
+  [491,"Elipsis","Omitir palabras que se sobreentienden, para hacer la frase más rápida y elegante.","Figura retórica que consiste en omitir uno o más elementos de la oración que se sobreentienden."],
+  [492,"Hipérbole","Exagerar algo de manera enorme para darle énfasis.","Figura retórica que consiste en exagerar de manera desproporcionada la realidad."],
+  [493,"Litotes","Afirmar algo negando su contrario, para sonar más modesto o irónico.","Figura retórica que consiste en afirmar algo negando su contrario, a menudo como forma de atenuación."],
+  [494,"Ironía","Decir lo contrario de lo que se piensa, o que el resultado sea lo opuesto a lo esperado.","Figura retórica que consiste en dar a entender lo contrario de lo que se dice, o discrepancia entre expectativa y realidad."],
+  [495,"Sarcasmo","Una ironía mordaz y cruel, diseñada para herir o burlarse de alguien.","Forma de ironía amarga o burlona, destinada a ridiculizar o herir."],
+  [496,"Mindfulness","Prestar atención total al momento presente, sin juzgarlo.","Práctica psicológica de mantener la conciencia momento a momento, sin juicios, sobre los pensamientos y el entorno."],
+  [497,"Flow","Ese estado mágico en el que estás tan concentrado en una tarea que pierdes la noción del tiempo.","Estado mental de inmersión completa y enfoque energizado en una actividad."],
+  [498,"Procrastinación","Posponer voluntariamente algo importante, sabiendo que te va a traer consecuencias negativas.","Acción o hábito de retrasar actividades o situaciones que deben atenderse."],
+  [499,"Síndrome del Impostor","Sentir que eres un fraude y que en cualquier momento te van a descubrir, a pesar de tus éxitos.","Patrón psicológico de dudar de los logros propios y tener un miedo internalizado a ser expuesto como fraude."],
+  [500,"Sabiduría","Saber qué conceptos usar, cuándo usarlos, y cuándo quedarse en silencio.","Capacidad de aplicar el conocimiento, la experiencia y el entendimiento de manera profunda y juiciosa."]
+];
+
+// Mapeo de tomos según los rangos
+function getTomo(num) {
+  if (num <= 150) return 1;
+  if (num <= 170) return 2;
+  if (num <= 200) return 3;
+  if (num <= 250) return 4;
+  if (num <= 300) return 5;
+  if (num <= 400) return 6;
+  return 7;
+}
+
+const main = document.getElementById('main');
+const searchInput = document.getElementById('searchInput');
+const filtersContainer = document.getElementById('filters');
+const counter = document.getElementById('counter');
+const themeToggle = document.getElementById('themeToggle');
+
+let currentFilter = 'all';
+let currentSearch = '';
+
+function render() {
+  main.innerHTML = '';
+  const tomoOrder = [1,2,3,4,5,6,7];
+  let totalVisible = 0;
+
+  tomoOrder.forEach(t => {
+    const info = tomos[t];
+    const filtered = conceptos.filter(c => {
+      const num = c[0];
+      const inTomo = currentFilter === 'all' || getTomo(num) === parseInt(currentFilter);
+      const matchSearch = !currentSearch || 
+        c[1].toLowerCase().includes(currentSearch) ||
+        c[2].toLowerCase().includes(currentSearch) ||
+        c[3].toLowerCase().includes(currentSearch);
+      return inTomo && matchSearch;
+    });
+
+    if (filtered.length === 0) return;
+    totalVisible += filtered.length;
+
+    const section = document.createElement('section');
+    section.className = 'tomo';
+    section.id = `tomo-${t}`;
+    section.innerHTML = `
+      <div class="tomo-header">
+        <div class="tomo-number">Tomo ${['I','II','III','IV','V','VI','VII'][t-1]}</div>
+        <h2 class="tomo-title">${info.titulo}</h2>
+        <div class="tomo-subtitle">${info.sub}</div>
+      </div>
+      <div class="concepts-grid">
+        ${filtered.map(c => `
+          <article class="concept">
+            <div class="concept-num">№ ${String(c[0]).padStart(3,'0')}</div>
+            <h3 class="concept-word">${c[1]}</h3>
+            <div class="def feynman">
+              <div class="def-label">Feynman</div>
+              <div class="def-text">${c[2]}</div>
+            </div>
+            <div class="def formal">
+              <div class="def-label">Formal</div>
+              <div class="def-text">${c[3]}</div>
+            </div>
+          </article>
+        `).join('')}
+      </div>
+    `;
+    main.appendChild(section);
+  });
+
+  if (totalVisible === 0) {
+    main.innerHTML = `<div class="no-results">Ningún concepto coincide con tu búsqueda.</div>`;
+  }
+
+  counter.textContent = `${totalVisible} concepto${totalVisible !== 1 ? 's' : ''}`;
+}
+
+searchInput.addEventListener('input', (e) => {
+  currentSearch = e.target.value.toLowerCase().trim();
+  render();
+});
+
+filtersContainer.addEventListener('click', (e) => {
+  if (e.target.classList.contains('filter-btn')) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    e.target.classList.add('active');
+    currentFilter = e.target.dataset.tomo;
+    render();
+  }
+});
+
+themeToggle.addEventListener('click', () => {
+  const current = document.documentElement.getAttribute('data-theme');
+  if (current === 'dark') {
+    document.documentElement.removeAttribute('data-theme');
+    themeToggle.textContent = 'Noche';
+  } else {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    themeToggle.textContent = 'Día';
+  }
+});
+
+render();
+</script>
+
+</body>
+</html>
